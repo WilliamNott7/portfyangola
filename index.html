@@ -1,0 +1,2911 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfy Angola conecta criadores de conteúdo e profissionais de serviços a oportunidades reais de crescimento, parcerias e visibilidade no mercado angolano.">
+
+
+
+    <meta name="keywords" content="mini site, criador de conteúdo, link na bio, portfólio digital, Instagram, TikTok, redes sociais, visibilidade online, promoção digital, marketing pessoal, link único, apresentação online, criador de conteúdos Angola, site para influencers, página pessoal online, tráfego para redes sociais, site responsivo, Betinhas, Influenciador, Facebook, Link Pro">
+    <meta name="author" content="Portfy Angola">
+    <meta name="robots" content="index, follow">
+
+
+      <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Portfy Angola">
+    <meta property="og:description" content="Portfy Angola conecta criadores de conteúdo e profissionais de serviços a oportunidades reais de crescimento, parcerias e visibilidade no mercado angolano.">
+    <meta property="og:image" content="https://portfyangola.vercel.app/sobre.png"> 
+    <!-- imagem de destaque -->
+    <meta property="og:url" content="https://portfyangola.vercel.app/">
+    <meta property="og:type" content="website">
+    
+    <title>Portfy Angola</title>
+    <!-- Font Awesome (ícones) -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8faff;
+            color: #1e1e2f;
+            line-height: 1.5;
+        }
+
+        :root {
+            --primary: #6c5ce7;
+            --primary-dark: #5649c0;
+            --secondary: #00d2d3;
+            --dark: #1e1e2f;
+            --gray: #6b7280;
+            --light-bg: #f1f5f9;
+            --white: #ffffff;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            transition: height 0.2s;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            font-weight: 500;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 8px 16px -6px rgba(108,92,231,0.3);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* hero */
+        .hero {
+            padding: 60px 0 40px;
+            background: linear-gradient(145deg, #ffffff 0%, #f0f3ff 100%);
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            max-width: 800px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn-large {
+            padding: 14px 36px;
+            font-size: 1.1rem;
+        }
+
+        /* seções */
+        section {
+            padding: 70px 0;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .section-sub {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 48px;
+            font-size: 1.1rem;
+        }
+
+        /* carrossel */
+        .carousel-section {
+            position: relative;
+        }
+        .carousel-wrapper {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            padding: 8px 4px 24px;
+            display: flex;
+            gap: 24px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+        .carousel-wrapper::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 20px;
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 280px; /* um pouco maior para acomodar botões */
+        }
+        .carousel-controls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .carousel-btn {
+            background: white;
+            border: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--primary);
+            transition: 0.2s;
+        }
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* card de criadora - NOVO LAYOUT */
+        .creator-card {
+            background: white;
+            border-radius: 28px;
+            padding: 20px 16px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: transform 0.2s;
+        }
+        .creator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(108,92,231,0.1);
+        }
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 6px 12px rgba(108,92,231,0.2);
+            margin: -40px auto 12px;
+        }
+        .badge-top {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: black;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            z-index: 2;
+        }
+        .badge-hot {
+            background: #ff6b6b;
+            color: white;
+            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            z-index: 2;
+        }
+        .creator-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 8px 0 4px;
+        }
+        .creator-type {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        /* botões de redes sociais no card */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 1.2rem;
+        }
+        .social-btn.instagram {
+            background: #d62976;
+        }
+        .social-btn.tiktok {
+            background: #010101;
+        }
+        .social-btn:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+        .btn-contact {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 10px 0;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+        .btn-contact:hover {
+            background: var(--primary-dark);
+        }
+        .verified {
+            color: var(--primary);
+            margin-left: 6px;
+        }
+
+        /* categorias */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+        .category-item {
+            background: white;
+            border-radius: 60px;
+            padding: 16px 8px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f6;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .category-item i {
+            color: var(--primary);
+        }
+        .category-item:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .category-item:hover i {
+            color: white;
+        }
+
+        /* como funciona */
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .step-card {
+            background: white;
+            border-radius: 32px;
+            padding: 30px 20px;
+            text-align: center;
+            flex: 1 1 200px;
+            max-width: 260px;
+            box-shadow: 0 16px 30px rgba(0,0,0,0.02);
+        }
+        .step-icon {
+            background: var(--light-bg);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        /* planos */
+        .pricing-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 36px;
+            padding: 32px 24px;
+            flex: 1 1 260px;
+            max-width: 320px;
+            box-shadow: 0 20px 40px -10px rgba(108,92,231,0.1);
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .pricing-card.pro {
+            border-color: var(--primary);
+            transform: scale(1.02);
+            background: linear-gradient(145deg, white, #f7f5ff);
+        }
+        .pricing-card.elite {
+            background: var(--dark);
+            color: white;
+        }
+        .pricing-card.elite .pricing-price, 
+        .pricing-card.elite .pricing-features li {
+            color: rgba(255,255,255,0.8);
+        }
+        .pricing-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: var(--dark);
+        }
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .pricing-features li {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-plan a {
+            width: 100%;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 14px;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-plan a:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .pricing-card.elite .btn-plan {
+            border-color: white;
+            color: white;
+        }
+        .pricing-card.elite .btn-plan:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        /* depoimentos */
+        .testimonials {
+            background: var(--light-bg);
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px;
+            max-width: 400px;
+            margin: 0 12px;
+        }
+
+
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 900px) {
+            .header-content {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 16px 0;
+                gap: 12px;
+            }
+            .nav-menu {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                gap: 20px;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .btn-large {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .carousel-item {
+                width: 260px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .logo {
+                text-align: center;
+                margin-bottom: 8px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            .nav-menu a {
+                font-size: 0.9rem;
+            }
+            .header-buttons {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+            }
+            .btn-large {
+                text-align: center;
+            }
+            .carousel-item {
+                width: 240px;
+            }
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .step-card {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+            .pricing-card {
+                max-width: 100%;
+            }
+            .testimonials .carousel-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .testimonial-card {
+                max-width: 100%;
+                margin: 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .carousel-item {
+                width: 200px;
+            }
+            .creator-avatar {
+                width: 80px;
+                height: 80px;
+                margin-top: -30px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .carousel-controls {
+                display: none;
+            }
+        }
+        
+        
+        
+                /* RESET mínimo para não afetar o site onde for inserido */
+        .top-portfolios-carousel * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-portfolios-carousel {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            background: #f8fafc;
+            border-radius: 1.5rem;
+        }
+
+        /* Cabeçalho da seção */
+        .carousel-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .carousel-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-header p {
+            color: #475569;
+            font-size: 1rem;
+        }
+
+        /* Container do carrossel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 0.5rem 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 1.5rem;
+            padding: 1rem 0.5rem 2rem;
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel-track::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+
+        .carousel-track::-webkit-scrollbar-thumb {
+            background: #6366f1;
+            border-radius: 10px;
+        }
+
+        /* Cards */
+        .portfolio-card {
+            flex: 0 0 auto;
+            width: 280px;
+            scroll-snap-align: start;
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            padding: 1.5rem 1rem 1.5rem;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px rgba(99,102,241,0.15);
+        }
+
+        /* Foto */
+        .card-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            background: #f1f5f9;
+        }
+
+        /* Nome */
+        .card-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Tipo de conteúdo */
+        .card-type {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #6366f1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Botão atrativo */
+        .btn-ver-mais {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 8px rgba(99,102,241,0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-ver-mais:hover {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(99,102,241,0.4);
+        }
+
+        /* Botões de navegação */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #6366f1;
+            transition: 0.2s;
+            z-index: 2;
+        }
+
+        .nav-button:hover {
+            background: #6366f1;
+            color: white;
+        }
+
+        .nav-button.prev {
+            left: 0;
+        }
+
+        .nav-button.next {
+            right: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .portfolio-card {
+                width: 260px;
+            }
+            .nav-button {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .top-portfolios-carousel {
+                padding: 1rem 0.5rem;
+            }
+            .portfolio-card {
+                width: 240px;
+            }
+            .card-photo {
+                width: 100px;
+                height: 100px;
+            }
+            .btn-ver-mais {
+                padding: 0.6rem 1.4rem;
+                font-size: 0.85rem;
+            }
+            /* Esconder botões de navegação em telas muito pequenas (scroll nativo) */
+            .nav-button {
+                display: none;
+            }
+        }
+        
+        
+        
+        
+                .top5-carousel {
+            max-width: 1400px;
+            margin: 2rem auto;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 2rem;
+            padding: 2rem 1rem;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+        }
+
+        /* Cabeçalho */
+        .carousel-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .carousel-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e293b, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .carousel-header p {
+            color: #4b5563;
+            font-size: 1rem;
+        }
+
+        /* Área do carrossel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 1.8rem;
+            padding: 0.5rem 0.5rem 1.8rem 0.5rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+        .carousel-track::-webkit-scrollbar {
+            height: 6px;
+        }
+        .carousel-track::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 20px;
+        }
+        .carousel-track::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 20px;
+        }
+
+        /* Card individual */
+        .portfolio-card {
+            flex: 0 0 auto;
+            width: 280px;
+            scroll-snap-align: start;
+            background: #ffffff;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(0px);
+            border: 1px solid rgba(59,130,246,0.1);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(59,130,246,0.2);
+            border-color: rgba(59,130,246,0.3);
+        }
+
+        /* Badge de nível */
+        .level-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+            z-index: 2;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        /* cores diferentes para cada nível (exemplo) */
+        .level-elite { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+        .level-pro { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+        .level-basic { background: linear-gradient(135deg, #6b7280, #374151); }
+        .level-star { background: linear-gradient(135deg, #ec489a, #8b5cf6); }
+
+        /* Foto */
+        .card-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 2rem auto 1rem;
+            display: block;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            background: #f1f5f9;
+        }
+
+        /* Informações */
+        .card-info {
+            text-align: center;
+            padding: 0 1rem 1.5rem;
+        }
+        .card-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+        .card-niche {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 1.2rem;
+            background: transparent;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+        }
+
+        /* Botão do portfólio */
+        .btn-portfolio {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .btn-portfolio i {
+            font-size: 0.9rem;
+        }
+        .btn-portfolio:hover {
+            background: #3b82f6;
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(59,130,246,0.3);
+        }
+
+        /* Botões de navegação */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #0f172a;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+        .nav-btn:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-50%) scale(1.05);
+        }
+        .nav-btn.prev {
+            left: -10px;
+        }
+        .nav-btn.next {
+            right: -10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .portfolio-card {
+                width: 260px;
+            }
+            .nav-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            .nav-btn.prev { left: -5px; }
+            .nav-btn.next { right: -5px; }
+        }
+
+        @media (max-width: 550px) {
+            .top5-carousel {
+                padding: 1.5rem 0.5rem;
+            }
+            .portfolio-card {
+                width: 240px;
+            }
+            .card-photo {
+                width: 100px;
+                height: 100px;
+            }
+            .btn-portfolio {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+            /* Em telas pequenas, esconde os botões de navegação e usa scroll nativo */
+            .nav-btn {
+                display: none;
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         .stats-section * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .stats-section {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(145deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Título da seção (opcional) */
+        .stats-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .stats-title h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e293b, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .stats-title p {
+            color: #4b5563;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Container dos cards */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        /* Cada card estatístico */
+        .stat-card {
+            background: white;
+            border-radius: 1.8rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            flex: 1 1 240px;
+            min-width: 200px;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            backdrop-filter: blur(2px);
+        }
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Ícone */
+        .stat-icon {
+            font-size: 2.8rem;
+            color: #3b82f6;
+            margin-bottom: 1.2rem;
+            background: #eff6ff;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            transition: 0.2s;
+        }
+        .stat-card:hover .stat-icon {
+            background: #3b82f6;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Número com contador */
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 4px;
+        }
+        .plus-sign {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+        .count {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        /* Descrição */
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4b5563;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .stats-section {
+                padding: 1.5rem 1rem;
+            }
+            .stat-card {
+                padding: 1.5rem 1rem;
+                min-width: 180px;
+            }
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            .count {
+                font-size: 2.2rem;
+            }
+            .plus-sign {
+                font-size: 2rem;
+            }
+            .stat-icon {
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .stats-container {
+                gap: 1rem;
+            }
+            .stat-card {
+                flex: 1 1 100%;
+                max-width: 280px;
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+                .portfy-about {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1280px;
+            margin: 3rem auto;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* grid principal: duas colunas */
+        .portfy-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .portfy-col {
+            flex: 1 1 300px;
+        }
+
+        /* imagem da PORTFY */
+        .portfy-image {
+            text-align: center;
+            background: linear-gradient(135deg, #eef2ff, #ffffff);
+            border-radius: 2rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .portfy-image:hover {
+            transform: scale(1.02);
+        }
+        .portfy-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+
+        /* título */
+        .section-titles {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #1e293b, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        .subhead {
+            color: #4b5563;
+            margin-bottom: 1.8rem;
+            font-size: 1rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+
+        /* cards de público (quem é) */
+        .audience-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .audience-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 0.8rem 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+            border: 1px solid rgba(59,130,246,0.2);
+            transition: all 0.2s;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .audience-card i {
+            font-size: 1.2rem;
+            color: #3b82f6;
+        }
+        .audience-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+            background: #f0f7ff;
+        }
+
+        /* cards de benefícios (por que escolher) */
+        .benefits-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .benefit-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem;
+            flex: 1 1 200px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+            border: 1px solid #eef2ff;
+            transition: all 0.3s;
+        }
+        .benefit-card i {
+            font-size: 2rem;
+            color: #3b82f6;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            background: #eff6ff;
+            padding: 0.7rem;
+            border-radius: 1rem;
+        }
+        .benefit-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #0f172a;
+        }
+        .benefit-card p {
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px -10px rgba(59,130,246,0.15);
+            border-color: rgba(59,130,246,0.3);
+        }
+
+        /* Animações com scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .portfy-about {
+                padding: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .audience-card {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            .benefit-card {
+                flex: 1 1 160px;
+            }
+        }
+        @media (max-width: 550px) {
+            .portfy-grid {
+                flex-direction: column;
+            }
+            .benefits-grid {
+                flex-direction: column;
+            }
+            .benefit-card {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            .benefit-card i {
+                margin-bottom: 0;
+            }
+        }
+        
+        
+
+
+
+
+
+
+
+/* Reset mínimo para não interferir no site */
+        .portfy-footer * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+   .portfy-footer {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 3rem 1.5rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Grid principal */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Cada coluna */
+        .footer-col h4 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 40px;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 3px;
+        }
+        .footer-col p {
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+        .footer-col ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.9rem;
+        }
+        .footer-col ul li a:hover {
+            color: #3b82f6;
+            padding-left: 4px;
+        }
+
+        /* Contatos com ícones */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .contact-item i {
+            width: 28px;
+            color: #3b82f6;
+            font-size: 1.1rem;
+        }
+        .contact-item a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-item a:hover {
+            color: #3b82f6;
+        }
+
+        /* Redes sociais */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-links a {
+            background: #1e293b;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Newsletter (opcional, mas essencial) */
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            border-radius: 40px;
+            border: none;
+            background: #1e293b;
+            color: white;
+            outline: none;
+            font-size: 0.9rem;
+        }
+        .newsletter-form button {
+            background: #3b82f6;
+            border: none;
+            padding: 0 1.2rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .newsletter-form button:hover {
+            background: #2563eb;
+        }
+
+        /* Copyright e links legais */
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+        .legal-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .legal-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .legal-links a:hover {
+            color: #3b82f6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .legal-links {
+                justify-content: center;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+   .promo-portfolio {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            overflow: hidden;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+        }
+
+        .promo-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            padding: 2.5rem;
+        }
+
+        /* Lado esquerdo: imagem real */
+        .promo-image {
+            flex: 1 1 280px;
+            text-align: center;
+        }
+        .promo-image img {
+            max-width: 100%;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+        .promo-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lado direito: conteúdo */
+        .promo-content {
+            flex: 2 1 400px;
+            color: white;
+        }
+        .promo-badge {
+            background: #ec489a;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .promo-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .promo-content h2 span {
+            background: linear-gradient(135deg, #facc15, #ec489a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .promo-description {
+            font-size: 1rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .offer-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .offer-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+        .offer-list li i {
+            color: #facc15;
+            width: 24px;
+            font-size: 1.1rem;
+        }
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: rgba(255,255,255,0.1);
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            margin-bottom: 1.8rem;
+            backdrop-filter: blur(4px);
+        }
+        .price small {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+        }
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+            box-shadow: 0 12px 25px rgba(37,211,102,0.4);
+        }
+
+        /* Responsividade */
+        @media (max-width: 800px) {
+            .promo-inner {
+                padding: 1.8rem;
+            }
+            .promo-content h2 {
+                font-size: 1.8rem;
+            }
+            .price {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 650px) {
+            .promo-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .offer-list li {
+                justify-content: center;
+            }
+            .price {
+                display: inline-block;
+            }
+            .btn-whatsapp {
+                justify-content: center;
+            }
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Portfy Angola</div>
+        </div>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1><span>Visibilidade é Poder</span> <br> Constrói uma marca que atrai clientes de verdade</h1>
+            <p>Eleva a tua imagem, posiciona-te como profissional e destaca-te no mercado com um portfólio de alto nível</p>
+            <div class="hero-buttons">
+                <a href="#users" class="btn btn-primary btn-large">Explorar Criadores</a>
+                
+                
+                <a href="#plano" class="btn btn-outline btn-large">Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+        <!-- Seção de estatísticas -->
+    <section class="stats-section">
+        <div class="stats-title">
+            <h3>Nossa plataforma em números</h3>
+            <p>Resultados que comprovam o crescimento da comunidade</p>
+        </div>
+        <div class="stats-container">
+            <!-- Card Portfólios -->
+            <div class="stat-card reveal">
+                <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="stat-number">
+                    <span class="plus-sign">+</span>
+                    <span class="count" id="countPortfolios" data-target="15">0</span>
+                </div>
+                <div class="stat-label">Portfólios criados</div>
+            </div>
+            
+            
+            
+            
+            <!-- Card Visitantes -->
+            <div class="stat-card reveal">
+                <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                <div class="stat-number">
+                    <span class="plus-sign">+</span>
+                    <span class="count" id="countVisitors" data-target="100">0</span>
+                </div>
+                <div class="stat-label">Visitantes únicos</div>
+            </div>
+            
+            
+            
+            
+            <!-- Card Criadores -->
+            <div class="stat-card reveal">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number">
+                    <span class="plus-sign">+</span>
+                    <span class="count" id="countCreators" data-target="15">0</span>
+                </div>
+                <div class="stat-label">Criadores na plataforma</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+       <!-- Componente Carrossel Top 5 Portfólios -->
+
+
+ <section class="top5-carousel">
+        <div class="carousel-header">
+            <h2><i class="fas fa-chart-line"></i> Top 6 Portfólios Mais Acessados</h2>
+            <p>Os perfis que estão dominando a audiência esta semana</p>
+        </div>
+
+        <div class="carousel-container">
+            <button class="nav-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+            <button class="nav-btn next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+
+
+
+
+
+
+            <div class="carousel-track" id="top5Track">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Card 1 - Elite -->
+                <div class="portfolio-card">
+                    <div class="level-badge level-elite"><i class="fas fa-crown"></i> Top Portfólio</div>
+                    <img class="card-photo" src="img_7.jpg" alt="Elisa Fonseca">
+                    <div class="card-info">
+                        <div class="card-name">Elisa Fonseca</div>
+                        <div class="card-niche">Criadora de conteúdos</div>
+                        <a href="https://elisafonseca.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Card 2 - PRO -->
+                <div class="portfolio-card">
+                    <div class="level-badge level-pro"><i class="fas fa-bolt"></i> Em Alta</div>
+                    <img class="card-photo" src="img_2.jpg" alt="Marilene Pancada">
+                    <div class="card-info">
+                        <div class="card-name">Marilene Pancada</div>
+                        <div class="card-niche">Criadora de conteúdos</div>
+                        <a href="https://marilenepancada.vercel.app/" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Card 3 - Elite (Star) -->
+                <div class="portfolio-card">
+                    <div class="level-badge level-star"><i class="fas fa-star"></i> Destaque</div>
+                    <img class="card-photo" src="img_1.jpg" alt="Luna Vambano">
+                    <div class="card-info">
+                        <div class="card-name">Luna Vambano</div>
+                        <div class="card-niche">Criadora de conteúdos</div>
+                        <a href="https://lunavambano.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Card 4 - PRO -->
+                <div class="portfolio-card">
+                    <div class="level-badge level-pro"><i class="fas fa-arrow-up"></i> Em Crescimento</div>
+                    <img class="card-photo" src="img_11.jpg" alt="Larissa Ribas">
+                    <div class="card-info">
+                        <div class="card-name">Larissa Ribas</div>
+                        <div class="card-niche">Criadora de conteúdos</div>
+                        <a href="https://larissaribas.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+          <!-- Card 5 - Profissional -->
+                <div class="portfolio-card">
+                    <div class="level-badge level-elite"><i class="fas fa-fire"></i> Premium</div>
+                    <img class="card-photo" src="img_18.jpg" alt="Delicias">
+                    <div class="card-info">
+                        <div class="card-name">Delicias Mar e Terra</div>
+                        <div class="card-niche">Restaurante</div>
+                        <a href="https://deliciasmareterra.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <!-- Card 6 - Basic (com nível iniciante) -->
+                <div class="portfolio-card">
+                    <div class="level-badge level-basic"><i class="fas fa-user"></i> Profissional</div>
+                    <img class="card-photo" src="img_4.jpg" alt="Setamba">
+                    <div class="card-info">
+                        <div class="card-name">Setamba</div>
+                        <div class="card-niche">Empreendedor</div>
+                        <a href="https://setamba.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="portfy-about">
+        <!-- grid com foto e descrição -->
+        <div class="portfy-grid">
+            <!-- coluna imagem -->
+            <div class="portfy-col reveal">
+                <div class="portfy-image">
+                    <!-- Foto da PORTFY (ilustração moderna) - substitua pelo URL real -->
+                    <img src="perfil.png" alt="Portfy - Plataforma de Portfólios">
+                    <p style="margin-top: 1rem; font-size: 0.8rem; color: #6c757d;">Sua vitrine profissional começa aqui</p>
+                </div>
+            </div>
+
+            <!-- coluna texto + cards -->
+            <div class="portfy-col">
+                <div class="reveal">
+                    <h2 class="section-titles">Para quem é a PORTFY?</h2>
+                    <div class="subhead">Uma plataforma feita para profissionais que querem se destacar</div>
+                    <div class="audience-grid">
+                        <div class="audience-card"><i class="fas fa-video"></i> Criadores de conteúdo</div>
+                        <div class="audience-card"><i class="fas fa-brush"></i> Maquiadoras</div>
+                        <div class="audience-card"><i class="fas fa-camera"></i> Fotógrafos</div>
+                        <div class="audience-card"><i class="fas fa-chart-line"></i> Empreendedores</div>
+                        <div class="audience-card"><i class="fas fa-palette"></i> Designers</div>
+                        <div class="audience-card"><i class="fas fa-music"></i> Músicos</div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="margin-top: 2rem;">
+                    <h2 class="section-titles">Por que escolher a PORTFY?</h2>
+                    <div class="subhead">Os diferenciais que vão impulsionar sua carreira</div>
+                    <div class="benefits-grid">
+                        <div class="benefit-card reveal">
+                            <i class="fas fa-chart-simple"></i>
+                            <h4>Mais visibilidade</h4>
+                            <p>Seu trabalho alcança mais pessoas e marcas</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Apresentação profissional</h4>
+                            <p>Portfólio elegante e completo</p>
+                        </div>
+                        
+                        
+                        <div class="benefit-card reveal">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Mais chances de clientes</h4>
+                            <p>Conecte-se com oportunidades reais</p>
+                        </div>
+                        
+                        
+                        <div class="benefit-card reveal">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Plataforma focada em crescimento</h4>
+                            <p>Ferramentas e insights para evoluir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Criadoras em Alta (carrossel) -->
+    <section class="carousel-section" id="users">
+        <div class="container">
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="document.getElementById('hotCarousel').scrollBy({left: -300, behavior: 'smooth'})"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn" onclick="document.getElementById('hotCarousel').scrollBy({left: 300, behavior: 'smooth'})"><i class="fas fa-chevron-right"></i></button>
+            </div>
+                    
+                    
+            <div class="stats-title">
+            <h3>Criadoras Em Alta</h3>
+            <p>Conheça as criadoras que estão brilhando com a gente</p>
+            </div>
+        
+
+
+    <!-- 
+            <p class="section-sub">Conheça as criadoras que estão brilhando com a gente</p>
+            -->
+
+
+            <div class="carousel-wrapper" id="hotCarousel">
+                
+                
+                
+                                                <!-- Card 0 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_19.jpg" alt="txiaquitoco" class="creator-avatar">
+                        <div class="creator-name">Txia Quitoco</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/txiaquitoco?igsh=MWRkN2htdzdwYnk3dA%3D%3D&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://vm.tiktok.com/ZS9LdtymLw5Lg-TwelU/" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                <!-- Card 1 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_0.jpg" alt="Neydi Bianca" class="creator-avatar">
+                        <div class="creator-name">Neydi Bianca</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/neydibianca?igsh=OWQ1YzZ6a2NqdHRj&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@neydibianca?_r=1&_t=ZS-9567Vs6pW9V" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Card 2 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_5.jpg" alt="Elisabeth Gaspar" class="creator-avatar">
+                        <div class="creator-name">Elisabeth Gaspar</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/elisabeth_gaspar119?igsh=bm9xNnFmb2U2N2Ry" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Card 3 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_3.jpg" alt="Usuario" class="creator-avatar">
+                        <div class="creator-name">Silvia Tak</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/silvia_stak_ofc?igsh=bHJ0eGg2bTY0anp4&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@silviastak" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Card 4 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_6.jpg" alt="Rojácia Jacinto" class="creator-avatar">
+                        <div class="creator-name">Rojácia Jacinto</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/rojaciajacinto?igsh=dmwyc2J1Mm5qeTc4&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@rojaciajacinto123?_r=1&_t=ZS-950yf5cxNll" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Card 5 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_8.jpg" alt="Claudia Manuel" class="creator-avatar">
+                        <div class="creator-name">Claudia Manuel</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/claudia_manuell21?igsh=MXRsNXhkZnllZHB1Zw%3D%3D&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Card 6 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_9.jpg" alt="Any" class="creator-avatar">
+                        <div class="creator-name">Any</div>
+                        <div class="creator-type">Cabeleireira</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/anilza_f_oficial?igsh=azloNml5d2Yzczg1&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@anilza28?_r=1&_t=ZS-95AU0phI7oT" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <!-- Card 7 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_10.jpg" alt="" class="creator-avatar">
+                        <div class="creator-name">Tinha Que Ser O Angolano</div>
+                        <div class="creator-type">Criador de conteúdos</div>
+                        <div class="social-buttons">
+                        
+                            <a href="https://www.tiktok.com/@tinha.q.ser.o.a?_r=1&_t=ZS-959zlSDwvQW" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+                <!-- Card 8 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_12.jpg" alt="Toelnia" class="creator-avatar">
+                        <div class="creator-name">Toelnia</div>
+                        <div class="creator-type">Criadora.de conteúdos</div>
+                        <div class="social-buttons">
+                        
+                                                       <a href="https://www.instagram.com/toelnia?utm_source=qr&igsh=MTdpY3gxM3N0ODI0ag==" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                
+                
+                                
+                <!-- Card 9 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_13.jpg" alt="Carley Gomes" class="creator-avatar">
+                        <div class="creator-name">Carley Gomes</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/reel/DWgIpkijIFk/?igsh=MWt0Y2Y4MjVkaWFqNA==" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://vm.tiktok.com/ZS98xTjN4v4te-eb6d4/" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Card 10 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_14.jpg" alt="Nazaré Moniz" class="creator-avatar">
+                        <div class="creator-name">Nazaré Moniz</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/nazare.moniz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@usernazaremoniz/video/7612677635453373716?_r=1&u_code=e435ibg404a8i8&preview_pb=0&sharer_language=pt&_d=elc5ak5iehkijh&share_item_id=7612677635453373716&source=h5_m&timestamp=1775257188&user_id=7147266463907775493&sec_user_id=MS4wLjABAAAA_fBi6U7jNhBvzwtW-ruzF7L__QKdmtSCSWi1qdX0wUfjaEmrLA7xgGbgertSPJV7&item_author_type=1&social_share_type=0&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7566179165511993144&share_link_id=869157d9-1d96-46e1-9867-0a18b248dd83&share_app_id=1233&ugbiz_name=MAIN&ug_btm=b8727%2Cb2878&link_reflow_popup_iteration_sharer=%7B%22click_empty_to_play%22%3A1%2C%22dynamic_cover%22%3A1%2C%22follow_to_play_duration%22%3A-1.0%2C%22profile_clickable%22%3A1%7D&enable_checksum=1" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                <!-- Card 11 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_15.jpg" alt="Djenis" class="creator-avatar">
+                        <div class="creator-name">Djenis</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/dje_djey5?igsh=MTlqOXQ3aWpxbzJyOQ==" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://vm.tiktok.com/ZS98cCHde4MAJ-gTMuA/" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+
+                
+                
+                
+
+
+
+
+                <!-- Card 12 -->
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_16.jpg" alt="Edvania Sapalo" class="creator-avatar">
+                        <div class="creator-name">Edvania Sapalo</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+
+                <a href="https://www.tiktok.com/@edvaniasapalo?_r=1&_t=ZS-95I0rTKlWbq" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Card 13 -->
+        
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_17.jpg" alt="Raquel Nionje" class="creator-avatar">
+                        <div class="creator-name">Raquel Nionje</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/raquelnionje?igsh=cmk5bG12dTBzbmlv&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@raquel_nionje?_r=1&_t=ZS-95L5dx7rUrI" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Card 14 -->
+        
+                <div class="carousel-item">
+                    <div class="creator-card">
+                        <span class="badge-hot">Em Alta</span>
+                        <img src="img_20.jpg" alt="magnelma_alfredo" class="creator-avatar">
+                        <div class="creator-name">Magnelma Alfredo</div>
+                        <div class="creator-type">Beleza e Estilo</div>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/magnelma_alfredo?igsh=amUxeGp3OWtnZWc1&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            
+                <a href="https://www.tiktok.com/@magnelmaalfredo2?_r=1&_t=ZS-95OyCutojpd" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+
+
+
+
+
+
+
+
+
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Categorias -->
+  <!---  <section>
+        <div class="container">
+            <h2 class="section-title">Categorias</h2>
+            <p class="section-sub">Encontre criadoras por área de atuação</p>
+            <div class="categories-grid">
+                <div class="category-item"><i class="fas fa-star"></i> Influenciadoras</div>
+                <div class="category-item"><i class="fas fa-store"></i> Vendedoras Online</div>
+                <div class="category-item"><i class="fas fa-heart"></i> Lifestyle</div>
+                <div class="category-item"><i class="fas fa-music"></i> Música</div>
+                <div class="category-item"><i class="fas fa-briefcase"></i> Empreendedoras</div>
+            </div>
+        </div>
+    </section>
+    -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Como Funciona -->
+    <section style="background: #f0f3ff;">
+        <div class="container">
+            <div class="stats-title">
+            <h3>Como Funciona</h3>
+            </div>
+            
+            <div class="steps">
+                <div class="step-card reveal">
+                    <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Como criar o seu portfólio</h3>
+                    <p>Envia as tuas informações, nós criamos o teu portfólio profissional e em pouco tempo já podes usar para atrair clientes e oportunidades.</p>
+                </div>
+                
+                
+                
+                <div class="step-card reveal">
+                    <div class="step-icon"><i class="fas fa-share-alt"></i></div>
+                    <h3>Divulgar</h3>
+                    <p>O teu portfólio funciona como uma vitrine digital onde os clientes podem conhecer o teu trabalho, confiar no teu valor e entrar em contacto contigo de forma simples e rápida.</p>
+                </div>
+                
+                
+                
+                
+                <div class="step-card reveal">
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Crescer</h3>
+                    <p>Com um portfólio bem estruturado, aumentas a tua credibilidade, ganhas mais visibilidade e posicionas-te para receber oportunidades reais — solicita já o teu e dá o próximo passo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Planos e Preços -->
+    <section>
+        <div class="container reveal" id="plano">
+           
+            <div class="stats-title">
+            <h3>Pacotes e Preços</h3>
+            <p>Escolha o pacote ideal para turbinar sua presença digital
+            </p>
+            </div>
+           
+
+            <div class="pricing-grid">
+                
+                
+                
+                <!-- Essencial -->
+                <div class="pricing-card">
+                    <div class="pricing-name">Começa Hoje</div>
+                    <div class="pricing-price">7000 kz</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> 1 portfólio simples (1 página)</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Foto + descrição + contatos</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Links de redes sociais</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Área de sobre</li>
+                    </ul>
+                                   <a href="https://wa.me/244950820080?text=Olá!%20preciso%20do%20pacote%20Começa%20Hoje." class="btn btn-primary btn-large">Solicitar</a>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+                <!-- PRO -->
+                <div class="pricing-card pro">
+                    <div class="pricing-name">Profissional Em Destaque ⭐(Mais Escolhido)</div>
+                    <div class="pricing-price">15.000 kz </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Portfólio completo e estruturado</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Destaque de 5 serviços ou trabalhos</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Galeria de fotos/vídeos</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Botão direto para WhatsApp</li>
+                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Organização profissional do perfil</li>
+                    </ul>
+                                    <a href="https://wa.me/244950820080?text=Olá!%20preciso%20do%20pacote%20Profissional%20Em%20Destaque." class="btn btn-primary btn-large">Solicitar</a>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- ELITE -->
+                <div class="pricing-card elite">
+                    <div class="pricing-name">Marca De Elite</div>
+                    <div class="pricing-price">25.000 kz</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Tudo do plano Profissional em destaque +</li>
+                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Design personalizado e exclusivo</li>
+                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Estratégia básica de posicionamento</li>
+                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Otimização para atrair clientes e parcerias</li>
+                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Destaque premium (mais visibilidade)</li>
+                    </ul>
+                                   <a href="https://wa.me/244950820080?text=Olá!%20preciso%20do%20pacote%20Marca%20de%20Elite." class="btn btn-primary btn-large">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="stats-title">
+            <h3>O que dizem sobre os portfólios</h3>
+            </div>
+            
+            
+            
+            <div class="carousel-wrapper" style="justify-content: center; overflow-x: auto;">
+                <div class="testimonial-card reveal">
+                    <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.5; font-size: 1.5rem;"></i></p>
+                    <p>"Nunca pensei que um portfólio poderia mudar tanto. Em poucos dias, empresas e marcas começaram a me procurar."</p>
+                    <p style="margin-top: 20px; font-weight: 700;">— Luna Vambano., Criadora de conteúdos</p>
+                </div>
+                
+                
+                
+                <div class="testimonial-card reveal">
+                    <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.5; font-size: 1.5rem;"></i></p>
+                    <p>"Meu portfólio ajudou a organizar todo o meu conteúdo de forma profissional. Em 10 dias, percebi um aumento de +10 Mil seguidores no meu TikTok e mais clientes interessados nos meus serviços."</p>
+                    <p style="margin-top: 20px; font-weight: 700;">— Elisa Fonseca., Criadora de conteúdos</p>
+                </div>
+                
+                
+                
+                
+                <div class="testimonial-card reveal">
+                    <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.5; font-size: 1.5rem;"></i></p>
+                    <p>"Meu portfólio me deu a visibilidade que eu precisava. Em 2 semanas, o número de seguidores e contatos aumentou consideravelmente."</p>
+                    <p style="margin-top: 20px; font-weight: 700;">— Neidy., criadora de conteúdos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Área promocional de portfólio - com foto de pessoa real -->
+    
+    
+    <section class="promo-portfolio reveal">
+        <div class="promo-inner">
+            <div class="promo-image">
+                <img src="sobre.png" alt="Portfy">
+            </div>
+            <div class="promo-content">
+                <div class="promo-badge">🔥 OFERTA LIMITADA</div>
+                <h2>Tenha um <span>portfólio profissional</span> por um preço simples!</h2>
+                <p class="promo-description">Destaque seus trabalhos, atraia clientes e venda mais com um portfólio moderno e completo. Ideal para criadores, maquiadoras, fotógrafos e empreendedores.</p>
+                
+                <ul class="offer-list">
+                    <li><i class="fas fa-check-circle"></i> Design exclusivo e responsivo</li>
+                    <li><i class="fas fa-check-circle"></i> Links para todas as suas redes sociais</li>
+                   
+                    <li><i class="fas fa-check-circle"></i> Entrega em até que 2 dias úteis</li>
+                </ul>
+
+                <div class="price">
+                    Apenas <strong>5.000 KZ</strong>
+                </div>
+
+                <a href="https://wa.me/244950820080?text=Olá!%20Quero%20aproveitar%20a%20promoção%20do%20portfólio%20a%20preço%20simples." 
+                   class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp fa-lg"></i> SOLICITAR 
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Rodapé -->
+        <footer class="portfy-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Logo / Sobre -->
+                <div class="footer-col">
+                    <h4>Portfy Angola</h4>
+                    <p>Sua vitrine profissional. Conectamos criadores, artistas e empreendedores a novas oportunidades.</p>
+                    <div class="social-links">
+                        <a href="https://vm.tiktok.com/ZS98wYM38Dkvv-OufbE/" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        
+                        
+                <a href="https://wa.me/244950820080" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                
+                
+               <a href="tel:+244936584701" aria-label="Telefone"><i class="fas fa-phone-alt"></i>
+               </a>
+                
+                    </div>
+                </div>
+                
+                
+            </div>
+
+
+
+
+
+            <div class="footer-bottom">
+                <div>&copy; 2025 Portfy Angola. Todos os direitos reservados.
+            </div>
+               
+               
+
+            </div>
+        </div>
+    </footer>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        (function() {
+            // Função de animação de contagem (easing linear)
+            function animateCount(element, target, duration = 2000) {
+                let startTime = null;
+                const startValue = 0;
+                const step = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const progress = Math.min(1, (timestamp - startTime) / duration);
+                    const currentValue = Math.floor(progress * target);
+                    element.innerText = currentValue;
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        element.innerText = target; // garante o valor final exato
+                    }
+                };
+                requestAnimationFrame(step);
+            }
+
+            // Iniciar contagens quando a página carregar (refresh)
+            window.addEventListener('load', () => {
+                const portfolioEl = document.getElementById('countPortfolios');
+                const visitorsEl = document.getElementById('countVisitors');
+                const creatorsEl = document.getElementById('countCreators');
+
+                if (portfolioEl) {
+                    const target = parseInt(portfolioEl.getAttribute('data-target'), 10);
+                    animateCount(portfolioEl, target, 1800);
+                }
+                if (visitorsEl) {
+                    const target = parseInt(visitorsEl.getAttribute('data-target'), 10);
+                    animateCount(visitorsEl, target, 1800);
+                }
+                if (creatorsEl) {
+                    const target = parseInt(creatorsEl.getAttribute('data-target'), 10);
+                    animateCount(creatorsEl, target, 1800);
+                }
+            });
+        })();
+        
+        
+        
+        
+        
+        // Scroll reveal simples e leve
+        const reveals = document.querySelectorAll('.reveal');
+        function checkReveal() {
+            for (let el of reveals) {
+                const windowHeight = window.innerHeight;
+                const rect = el.getBoundingClientRect();
+                const revealPoint = 120;
+                if (rect.top < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                } else {
+                    // (opcional) remove se quiser repetir, mas manter ativo é melhor)
+                    // el.classList.remove('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', checkReveal);
+        window.addEventListener('load', checkReveal);
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+
+</body>
+</html>
