@@ -1775,6 +1775,297 @@
 
 
 
+.testimonials-area {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1280px;
+            margin: 3rem auto;
+            padding: 2rem 1.5rem;
+            background: #f8fafc;
+            border-radius: 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f172a, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .section-header p {
+            color: #4b5563;
+            font-size: 1rem;
+        }
+
+        /* Grid de feedbacks */
+        .feedbacks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Card individual */
+        .feedback-card {
+            background: white;
+            border-radius: 1.8rem;
+            padding: 1.8rem;
+            box-shadow: 0 10px 25px -8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(59,130,246,0.1);
+        }
+        .feedback-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(59,130,246,0.15);
+            border-color: rgba(59,130,246,0.2);
+        }
+
+        /* Perfil do usuário */
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .user-photo {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3b82f6;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .user-details h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .user-niche {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #3b82f6;
+            background: #eff6ff;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-top: 0.3rem;
+        }
+
+        /* Estrelas de avaliação */
+        .rating {
+            margin-bottom: 1rem;
+            color: #facc15;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        /* Texto do feedback */
+        .feedback-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #334155;
+            font-style: italic;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 3px solid #3b82f6;
+        }
+
+        /* Ícone de aspas */
+        .quote-icon {
+            font-size: 0.9rem;
+            color: #3b82f6;
+            margin-right: 0.3rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .testimonials-area {
+                padding: 1.5rem;
+            }
+            .feedbacks-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .feedback-card {
+                padding: 1.5rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .how-it-works {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1280px;
+            margin: 3rem auto;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+            border-radius: 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f172a, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .section-header p {
+            color: #4b5563;
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        /* Grid dos passos */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+
+        /* Card de passo */
+        .step-card {
+            background: white;
+            border-radius: 1.8rem;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 12px 25px -8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eef2ff;
+        }
+        .step-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(59,130,246,0.15);
+            border-color: rgba(59,130,246,0.3);
+        }
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #eef2ff, #ffffff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            font-size: 2rem;
+            color: #3b82f6;
+            transition: 0.2s;
+        }
+        .step-card:hover .step-icon {
+            background: #3b82f6;
+            color: white;
+        }
+        .step-number {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+        }
+        .step-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #0f172a;
+        }
+        .step-card p {
+            font-size: 0.9rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        /* Seção de informações necessárias */
+        .info-required {
+            background: #f1f5f9;
+            border-radius: 1.8rem;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+        .info-required h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        .info-item {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+        .info-item i {
+            font-size: 1.4rem;
+            color: #3b82f6;
+        }
+        .info-item span {
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .how-it-works {
+                padding: 1.5rem;
+            }
+            .steps-grid {
+                gap: 1.2rem;
+            }
+            .step-card {
+                padding: 1.2rem;
+            }
+            .info-required {
+                padding: 1.5rem;
+            }
+            .info-item {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
 
     </style>
 </head>
@@ -2131,40 +2422,70 @@
     
     
     <!-- Como Funciona -->
-    <section style="background: #f0f3ff;">
-        <div class="container">
-            <div class="stats-title">
-            <h3>Como Funciona</h3>
+    <div class="how-it-works">
+        <div class="section-header">
+            <h2> Como funciona a Portfy</h2>
+            <p>Criar seu portfólio digital é simples, rápido e transformador. Veja o passo a passo:</p>
+        </div>
+
+        <div class="steps-grid">
+            <!-- Passo 1 -->
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div class="step-number">Passo 1</div>
+                <h3>Escolha o plano</h3>
+                <p>Selecione o plano que melhor atende às suas necessidades: Start, Profissional ou Premium.</p>
             </div>
             
-            <div class="steps">
-                <div class="step-card reveal">
-                    <div class="step-icon"><i class="fas fa-user-plus"></i></div>
-                    <h3>Como criar o seu portfólio</h3>
-                    <p>Envia as tuas informações, nós criamos o teu portfólio profissional e em pouco tempo já podes usar para atrair clientes e oportunidades.</p>
-                </div>
-                
-                
-                
-                <div class="step-card reveal">
-                    <div class="step-icon"><i class="fas fa-share-alt"></i></div>
-                    <h3>Divulgar</h3>
-                    <p>O teu portfólio funciona como uma vitrine digital onde os clientes podem conhecer o teu trabalho, confiar no teu valor e entrar em contacto contigo de forma simples e rápida.</p>
-                </div>
-                
-                
-                
-                
-                <div class="step-card reveal">
-                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Crescer</h3>
-                    <p>Com um portfólio bem estruturado, aumentas a tua credibilidade, ganhas mais visibilidade e posicionas-te para receber oportunidades reais — solicita já o teu e dá o próximo passo.</p>
-                </div>
+            
+            
+            <!-- Passo 2 -->
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-paper-plane"></i></div>
+                <div class="step-number">Passo 2</div>
+                <h3>Envie suas informações</h3>
+                <p>Preencha um formulário com seus dados, fotos, links das redes e conteúdo que deseja exibir.</p>
+            </div>
+            
+            
+            
+            <!-- Passo 3 -->
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-palette"></i></div>
+                <div class="step-number">Passo 3</div>
+                <h3>Criação e revisão</h3>
+                <p>Nossa equipe cria o design personalizado e você pode solicitar revisões conforme o plano.</p>
+            </div>
+            
+            
+            
+            
+            <!-- Passo 4 -->
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                <div class="step-number">Passo 4</div>
+                <h3>Portfólio no ar</h3>
+                <p>Receba seu link exclusivo, compartilhe nas redes e comece a atrair clientes!</p>
             </div>
         </div>
-    </section>
 
 
+
+        <div class="info-required">
+            <h3>O que você precisa ter para criar seu portfólio</h3>
+            <div class="info-grid">
+                <div class="info-item"><i class="fas fa-user-circle"></i> <span>Duas Fotos</span></div>
+                <div class="info-item"><i class="fas fa-heading"></i> <span>Biografia / Sobre você</span></div>
+                <div class="info-item"><i class="fas fa-link"></i> <span>Links: Instagram, TikTok, Facebook, YouTube</span></div>
+                <div class="info-item"><i class="fas fa-images"></i> <span>Fotos / vídeos dos seus trabalhos</span></div>
+                <div class="info-item"><i class="fas fa-tag"></i> <span>Serviços que oferece (se aplicável)</span></div>
+                <div class="info-item"><i class="fas fa-envelope"></i> <span>E-mail para contato</span></div>
+            </div>
+            <p style="text-align: center; margin-top: 1.2rem; font-size: 0.85rem; color: #4b5563;">
+                <i class="fas fa-info-circle"></i> Após o envio, seu portfólio fica pronto em 1 dia (planos Premium têm prioridade).
+            </p>
+        </div>
+    </div>
 
 
 
@@ -2535,42 +2856,76 @@
 
 
     <!-- Depoimentos -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="stats-title">
-            <h3>O que dizem sobre os portfólios</h3>
+
+    <div class="testimonials-area">
+        <div class="section-header">
+            <h2>O que nossos clientes dizem</h2>
+            <p>Feedbacks reais de quem já transformou sua presença digital com a Portfy</p>
+        </div>
+        
+        <div class="feedbacks-grid">
+            
+            
+            
+            <!-- Feedback 1 -->
+            <div class="feedback-card reveal">
+                <div class="user-info">
+                    <img class="user-photo" src="feed_1.webp" alt="Usuario">
+                    <div class="user-details">
+                        <h4>Sofilson Makeup</h4>
+                        <span class="user-niche">Maquiador Profissional</span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="feedback-text">
+                    <i class="fas fa-quote-left quote-icon"></i> 
+                    O meu portfólio ficou incrível! Além de lindo, tem me trazido muitos contatos de clientes. Super recomendo a Portfy.
+                </div>
             </div>
-            
-            
-            
-            <div class="carousel-wrapper" style="justify-content: center; overflow-x: auto;">
-                <div class="testimonial-card reveal">
-                    <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.5; font-size: 1.5rem;"></i></p>
-                    <p>"Nunca pensei que um portfólio poderia mudar tanto. Em poucos dias, empresas e marcas começaram a me procurar."</p>
-                    <p style="margin-top: 20px; font-weight: 700;">— Luna Vambano., Criadora de conteúdos</p>
+
+
+
+
+            <!-- Feedback 2 -->
+            <div class="feedback-card reveal">
+                <div class="user-info">
+                    <img class="user-photo" src="feed_2.jpg" alt="Usuario">
+                    <div class="user-details">
+                        <h4>Amanda Garcia</h4>
+                        <span class="user-niche">Artista Musical</span>
+                    </div>
                 </div>
-                
-                
-                
-                <div class="testimonial-card reveal">
-                    <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.5; font-size: 1.5rem;"></i></p>
-                    <p>"Meu portfólio ajudou a organizar todo o meu conteúdo de forma profissional. Em 10 dias, percebi um aumento de +10 Mil seguidores no meu TikTok e mais clientes interessados nos meus serviços."</p>
-                    <p style="margin-top: 20px; font-weight: 700;">— Elisa Fonseca., Criadora de conteúdos</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                
-                
-                
-                
-                <div class="testimonial-card reveal">
-                    <p><i class="fas fa-quote-left" style="color: var(--primary); opacity: 0.5; font-size: 1.5rem;"></i></p>
-                    <p>"Meu portfólio me deu a visibilidade que eu precisava. Em 2 semanas, o número de seguidores e contatos aumentou consideravelmente."</p>
-                    <p style="margin-top: 20px; font-weight: 700;">— Neidy., criadora de conteúdos</p>
+                <div class="feedback-text">
+                    <i class="fas fa-quote-left quote-icon"></i> 
+                    A diferença entre amador e profissional está no portfólio. Aqui tem resultado, não só promessa. Recomendo! 
+                </div>
+            </div>
+
+
+            <!-- Feedback 3 -->
+            <div class="feedback-card reveal">
+                <div class="user-info">
+                    <img class="user-photo" src="feed_3.jpg" alt="Usuario">
+                    <div class="user-details">
+                        <h4>Luquénia Dias</h4>
+                        <span class="user-niche">Criadora de conteúdos</span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="feedback-text">
+                    <i class="fas fa-quote-left quote-icon"></i> 
+                    O design é impecável e o suporte muito atencioso. Meu portfólio virou meu principal cartão de visitas.
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
 
 
 
