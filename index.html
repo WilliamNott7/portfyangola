@@ -416,81 +416,186 @@
             color: var(--primary);
         }
 
+
+
+
+
+
+
         /* planos */
-        .pricing-grid {
+              .pricing-portfy {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1300px;
+            margin: 3rem auto;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(145deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 2rem;
+        }
+
+        /* cabeçalho */
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .pricing-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f172a, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-header p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        /* grid dos planos */
+        .plans-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 2rem;
+            margin: 2rem 0 2rem;
         }
-        .pricing-card {
+
+        /* card individual */
+        .plan-card {
             background: white;
-            border-radius: 36px;
-            padding: 32px 24px;
-            flex: 1 1 260px;
+            border-radius: 2rem;
+            padding: 1.8rem 1.5rem;
+            flex: 1 1 280px;
             max-width: 320px;
-            box-shadow: 0 20px 40px -10px rgba(108,92,231,0.1);
-            transition: 0.3s;
-            border: 2px solid transparent;
+            box-shadow: 0 12px 25px -8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eef2ff;
+            position: relative;
         }
-        .pricing-card.pro {
-            border-color: var(--primary);
-            transform: scale(1.02);
-            background: linear-gradient(145deg, white, #f7f5ff);
+        .plan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(59,130,246,0.2);
+            border-color: rgba(59,130,246,0.3);
         }
-        .pricing-card.elite {
-            background: var(--dark);
+
+        /* badge "mais vendido" */
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
             color: white;
-        }
-        .pricing-card.elite .pricing-price, 
-        .pricing-card.elite .pricing-features li {
-            color: rgba(255,255,255,0.8);
-        }
-        .pricing-name {
-            font-size: 1.6rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
         }
-        .pricing-price {
-            font-size: 2rem;
+
+        /* título e preço */
+        .plan-title {
+            font-size: 1.6rem;
             font-weight: 800;
-            margin-bottom: 24px;
-            color: var(--dark);
-        }
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        .pricing-features li {
-            margin: 12px 0;
+            margin-bottom: 0.3rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.5rem;
         }
-        .btn-plan a {
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0.8rem 0;
+        }
+        .plan-price small {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #4b5563;
+        }
+        .plan-sub {
+            font-size: 0.85rem;
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-left: 3px solid #3b82f6;
+            padding-left: 0.6rem;
+        }
+
+        /* lista de features */
+        .features-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .features-list li {
+            margin-bottom: 0.7rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #334155;
+        }
+        .features-list li i {
+            color: #3b82f6;
+            width: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* botão */
+        .btn-plan {
+            background: #0f172a;
+            color: white;
+            border: none;
             width: 100%;
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            font-weight: 700;
-            padding: 14px;
+            padding: 0.8rem;
             border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
-        .btn-plan a:hover {
-            background: var(--primary);
-            color: white;
+        .btn-plan:hover {
+            background: #3b82f6;
+            transform: scale(1.02);
         }
-        .pricing-card.elite .btn-plan {
-            border-color: white;
-            color: white;
+
+        /* card específico para manutenção (pode ser menor) */
+        .maintenance-card {
+            max-width: 280px;
+            background: #fefce8;
+            border-color: #facc15;
         }
-        .pricing-card.elite .btn-plan:hover {
-            background: white;
-            color: var(--dark);
+        .maintenance-card .plan-title i {
+            color: #facc15;
         }
+
+        /* responsividade */
+        @media (max-width: 700px) {
+            .pricing-portfy {
+                padding: 1.5rem;
+            }
+            .plan-card {
+                max-width: 100%;
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
 
         /* depoimentos */
         .testimonials {
@@ -861,6 +966,11 @@
             color: #4b5563;
             font-size: 1rem;
         }
+        
+        
+        
+        
+        
 
         /* Área do carrossel */
         .carousel-container {
@@ -2060,8 +2170,7 @@
 
 
 
-
-
+"
 
 
 
@@ -2186,7 +2295,7 @@
                 <!-- Card 1 - Elite -->
                 <div class="portfolio-card">
                     <div class="level-badge level-elite"><i class="fas fa-crown"></i> Top Portfólio</div>
-                    <img class="card-photo" src="img_7.jpg" alt="Elisa Fonseca">
+                    <img class="card-photo" src="top_1.jpg" alt="Elisa Fonseca">
                     <div class="card-info">
                         <div class="card-name">Elisa Fonseca</div>
                         <div class="card-niche">Criadora de conteúdos</div>
@@ -2202,11 +2311,11 @@
                 <!-- Card 2 - PRO -->
                 <div class="portfolio-card">
                     <div class="level-badge level-pro"><i class="fas fa-bolt"></i> Em Alta</div>
-                    <img class="card-photo" src="img_2.jpg" alt="Marilene Pancada">
+                    <img class="card-photo" src="top_2.jpg" alt="Dobefut">
                     <div class="card-info">
-                        <div class="card-name">Marilene Pancada</div>
-                        <div class="card-niche">Criadora de conteúdos</div>
-                        <a href="https://marilenepancada.vercel.app/" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                        <div class="card-name">Dobefut</div>
+                        <div class="card-niche">Criador de conteúdos</div>
+                        <a href="https://dobefut.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
                     </div>
                 </div>
 
@@ -2220,7 +2329,7 @@
                 <!-- Card 3 - Elite (Star) -->
                 <div class="portfolio-card">
                     <div class="level-badge level-star"><i class="fas fa-star"></i> Destaque</div>
-                    <img class="card-photo" src="img_1.jpg" alt="Luna Vambano">
+                    <img class="card-photo" src="top_3.jpg" alt="Luna Vambano">
                     <div class="card-info">
                         <div class="card-name">Luna Vambano</div>
                         <div class="card-niche">Criadora de conteúdos</div>
@@ -2238,10 +2347,10 @@
           <!-- Card 4 - Profissional -->
                 <div class="portfolio-card">
                     <div class="level-badge level-elite"><i class="fas fa-fire"></i> Premium</div>
-                    <img class="card-photo" src="img_18.jpg" alt="Delicias">
+                    <img class="card-photo" src="top_4.jpg" alt="Delicias">
                     <div class="card-info">
-                        <div class="card-name">Delicias Mar e Terra</div>
-                        <div class="card-niche">Restaurante</div>
+                        <div class="card-name">Delícias Mar E  Terra</div>
+                        <div class="card-niche">Maquiador</div>
                         <a href="https://deliciasmareterra.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
                     </div>
                 </div>
@@ -2258,11 +2367,11 @@
                 <!-- Card 5 - Basic (com nível iniciante) -->
                 <div class="portfolio-card">
                     <div class="level-badge level-basic"><i class="fas fa-arrow-up"></i> Profissional</div>
-                    <img class="card-photo" src="img_4.jpg" alt="Setamba">
+                    <img class="card-photo" src="top_5.jpg" alt="Amanda Garcia">
                     <div class="card-info">
-                        <div class="card-name">Setamba</div>
-                        <div class="card-niche">Empreendedor</div>
-                        <a href="https://setamba.vercel.app" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
+                        <div class="card-name">Amanda Garcia</div>
+                        <div class="card-niche">Artista Musical</div>
+                        <a href="https://amandagarcia.vercel.app/" class="btn-portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Portfólio</a>
                     </div>
                 </div>
                 
@@ -2328,38 +2437,6 @@
                         <div class="audience-card"><i class="fas fa-music"></i> Músicos</div>
                     </div>
                 </div>
-
-                <div class="reveal" style="margin-top: 2rem;">
-                    <h2 class="section-titles">Por que escolher a PORTFY?</h2>
-                    <div class="subhead">Os diferenciais que vão impulsionar sua carreira</div>
-                    <div class="benefits-grid">
-                        <div class="benefit-card reveal">
-                            <i class="fas fa-chart-simple"></i>
-                            <h4>Mais visibilidade</h4>
-                            <p>Seu trabalho alcança mais pessoas e marcas</p>
-                        </div>
-                        <div class="benefit-card">
-                            <i class="fas fa-briefcase"></i>
-                            <h4>Apresentação profissional</h4>
-                            <p>Portfólio elegante e completo</p>
-                        </div>
-                        
-                        
-                        <div class="benefit-card reveal">
-                            <i class="fas fa-handshake"></i>
-                            <h4>Mais chances de clientes</h4>
-                            <p>Conecte-se com oportunidades reais</p>
-                        </div>
-                        
-                        
-                        <div class="benefit-card reveal">
-                            <i class="fas fa-rocket"></i>
-                            <h4>Plataforma focada em crescimento</h4>
-                            <p>Ferramentas e insights para evoluir</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -2424,8 +2501,8 @@
     <!-- Como Funciona -->
     <div class="how-it-works">
         <div class="section-header">
-            <h2> Como funciona a Portfy</h2>
-            <p>Criar seu portfólio digital é simples, rápido e transformador. Veja o passo a passo:</p>
+            <h2> Como criar o seu portfólio</h2>
+            <p>Para criar seu portfólio digital é simples, rápido e transformador. Veja o passo a passo:</p>
         </div>
 
         <div class="steps-grid">
@@ -2444,7 +2521,7 @@
                 <div class="step-icon"><i class="fas fa-paper-plane"></i></div>
                 <div class="step-number">Passo 2</div>
                 <h3>Envie suas informações</h3>
-                <p>Preencha um formulário com seus dados, fotos, links das redes e conteúdo que deseja exibir.</p>
+                <p>Após escolher o pacote envie seus dados, fotos, links das redes e conteúdo que deseja exibir.</p>
             </div>
             
             
@@ -2471,18 +2548,44 @@
 
 
 
+
+
+
         <div class="info-required">
             <h3>O que você precisa ter para criar seu portfólio</h3>
             <div class="info-grid">
+                
+                
                 <div class="info-item"><i class="fas fa-user-circle"></i> <span>Duas Fotos</span></div>
+                
+                
+                
                 <div class="info-item"><i class="fas fa-heading"></i> <span>Biografia / Sobre você</span></div>
+                
+                
+                
+                
+                <div class="info-item"><i class="fas fa-envelope"></i> <span>E-mail / Contacto do WhatsApp</span></div>
+                
+                
                 <div class="info-item"><i class="fas fa-link"></i> <span>Links: Instagram, TikTok, Facebook, YouTube</span></div>
+                
+                
+                
                 <div class="info-item"><i class="fas fa-images"></i> <span>Fotos / vídeos dos seus trabalhos</span></div>
+                
+                
+                
                 <div class="info-item"><i class="fas fa-tag"></i> <span>Serviços que oferece (se aplicável)</span></div>
-                <div class="info-item"><i class="fas fa-envelope"></i> <span>E-mail para contato</span></div>
+                
+                
+                
+               
+                
+                
             </div>
             <p style="text-align: center; margin-top: 1.2rem; font-size: 0.85rem; color: #4b5563;">
-                <i class="fas fa-info-circle"></i> Após o envio, seu portfólio fica pronto em 1 dia (planos Premium têm prioridade).
+                <i class="fas fa-info-circle"></i> Após o envio, seu portfólio fica pronto em 48 horas (planos Premium têm prioridade).
             </p>
         </div>
     </div>
@@ -2499,89 +2602,101 @@
 
 
     <!-- Planos e Preços -->
-    <section>
-        <div class="container reveal" id="plano">
-           
-            <div class="stats-title">
-            <h3>Escolhe o plano ideal para ti</h3>
-            <p>Investimento acessível para transformar o teu perfil em oportunidades reais
-            </p>
+    <div class="pricing-portfy">
+        <div class="pricing-header">
+            <h2>Planos e Preços</h2>
+            <p>Transforma o teu perfil numa vitrine profissional que atrai clientes, marcas e oportunidades reais.</p>
+        </div>
+
+        <div class="plans-grid">
+            <!-- ESSENCIAL -->
+            <div class="plan-card">
+                <div class="plan-title">📦 ESSENCIAL</div>
+                <div class="plan-price">8.000 Kz</div>
+                <div class="plan-sub">"A tua primeira vitrine"</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Portfólio profissional completo</li>
+                    <li><i class="fas fa-check-circle"></i> Foto de perfil e biografia</li>
+                    <li><i class="fas fa-check-circle"></i> Links de todas as redes sociais</li>
+                    <li><i class="fas fa-check-circle"></i> Botão directo para WhatsApp</li>
+                    <li><i class="fas fa-check-circle"></i> Área de sobre</li>
+                    <li><i class="fas fa-clock"></i> Entrega em 48 horas</li>
+                </ul>
+                <button class="btn-plan" onclick="window.location.href='https://wa.me/244936584701?text=Olá!%20Quero%20o%20plano%20ESSENCIAL%20da%20PORTFY'"><i class="fab fa-whatsapp"></i> Quero este</button>
             </div>
-           
-
-            <div class="pricing-grid">
-                
-                
-                
-                <!-- Start -->
-                <div class="pricing-card">
-                    <div class="pricing-name">START — “Começa Profissional”</div>
-                    <div class="pricing-price">5000 kz</div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> 1 portfólio simples</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Foto + descrição</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Links de redes sociais</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Área de sobre</li>
-                    </ul>
-                                   <a href="https://wa.me/244936584701?text=Olá!%20preciso%20do%20pacote%20Start." class="btn btn-primary btn-large">Solicitar</a>
-                </div>
-                
 
 
 
 
 
+            <!-- PROFISSIONAL (MAIS VENDIDO) -->
+            <div class="plan-card" style="border: 2px solid #3b82f6;">
+                <div class="popular-badge">🔥 MAIS VENDIDO</div>
+                <div class="plan-title">📦 PROFISSIONAL</div>
+                <div class="plan-price">18.000 Kz</div>
+                <div class="plan-sub">"Atrai marcas e parcerias"</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Tudo do plano Essencial +</li>
+                    <li><i class="fas fa-check-circle"></i> Galeria de fotos e vídeos</li>
+                    <li><i class="fas fa-check-circle"></i> Destaque de até 8 serviços</li>
+                    <li><i class="fas fa-check-circle"></i> Bio profissional escrita pela Portfy Angola</li>
+                    <li><i class="fas fa-check-circle"></i> Design personalizado com as tuas cores e identidade</li>
+                    <li><i class="fas fa-check-circle"></i> 1 revisão incluída</li>
+                    <li><i class="fas fa-clock"></i> Entrega em 48 horas</li>
+                </ul>
+                <button class="btn-plan" onclick="window.location.href='https://wa.me/244936584701?text=Olá!%20Quero%20o%20plano%20PROFISSIONAL%20da%20PORTFY'"><i class="fab fa-whatsapp"></i> Quero este</button>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
 
-
-
-
-
-
-                <!-- PRO -->
-                <div class="pricing-card pro">
-                    <div class="pricing-name">PRO — “Atrai Parcerias” 🔥 (MAIS VENDIDO)</div>
-                    <div class="pricing-price">15.000 kz </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Portfólio completo e estruturado</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Destaque de 5 serviços ou trabalhos</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Galeria de fotos/vídeos</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Botão direto para WhatsApp</li>
-                        <li><i class="fas fa-check" style="color: var(--primary);"></i> Organização profissional do perfil</li>
-                    </ul>
-                                    <a href="https://wa.me/244936584701?text=Olá!%20preciso%20do%20pacote%20Pro." class="btn btn-primary btn-large">Solicitar</a>
-                </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <!-- Premium -->
-                <div class="pricing-card elite">
-                    <div class="pricing-name">PREMIUM — “Nível Artista/Influencer”</div>
-                    <div class="pricing-price">25.000 kz</div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Tudo do plano Profissional em destaque +</li>
-                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Design personalizado e exclusivo</li>
-                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Estratégia básica de posicionamento</li>
-                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Otimização para atrair clientes e parcerias</li>
-                        <li><i class="fas fa-check" style="color: #00d2d3;"></i> Destaque premium (mais visibilidade)</li>
-                    </ul>
-                                   <a href="https://wa.me/244936584701?text=Olá!%20preciso%20do%20pacote%20Premium." class="btn btn-primary btn-large">Solicitar</a>
-                </div>
+            <!-- ÉLITE -->
+            <div class="plan-card">
+                <div class="plan-title">📦 ELITE ⭐</div>
+                <div class="plan-price">30.000 Kz</div>
+                <div class="plan-sub">"Nível Artista e Influencer"</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Tudo do plano Profissional +</li>
+                    <li><i class="fas fa-check-circle"></i> Design exclusivo e premium</li>
+                    <li><i class="fas fa-check-circle"></i> Estratégia de posicionamento digital</li>
+                    <li><i class="fas fa-check-circle"></i> Optimização para atrair marcas</li>
+                    <li><i class="fas fa-check-circle"></i> Destaque prioritário na plataforma</li>
+                    <li><i class="fas fa-check-circle"></i> 2 revisões incluídas</li>
+                    <li><i class="fas fa-clock"></i> Entrega em 24 horas com prioridade</li>
+                </ul>
+                <button class="btn-plan" onclick="window.location.href='https://wa.me/244936584701?text=Olá!%20Quero%20o%20plano%20ELITE%20da%20PORTFY'"><i class="fab fa-whatsapp"></i> Quero este</button>
             </div>
         </div>
-    </section>
 
 
 
 
 
+        <!-- Plano de Manutenção Mensal (destacado separadamente) -->
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <div class="plan-card maintenance-card" style="max-width: 350px;">
+                <div class="plan-title"><i class="fas fa-sync-alt"></i> MANUTENÇÃO MENSAL</div>
+                <div class="plan-price">5.000 Kz <small style="font-size:0.9rem;">/mês</small></div>
+                <div class="plan-sub">"Mantém o teu portfólio sempre actualizado"</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Actualização de fotos e conteúdo</li>
+                    <li><i class="fas fa-check-circle"></i> Adição de novos serviços</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte prioritário via WhatsApp</li>
+                    <li><i class="fas fa-check-circle"></i> Pequenas alterações mensais</li>
+                </ul>
+                <button class="btn-plan" onclick="window.location.href='https://wa.me/244936584701?text=Olá!%20Quero%20o%20plano%20de%20MANUTENÇÃO%20MENSAL'"><i class="fab fa-whatsapp"></i> Assinar</button>
+            </div>
+        </div>
 
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #6c757d;">
+            🔒 Todos os planos incluem link único e personalizado. Pagamento via transferência ou depósito.
+        </p>
+    </div>
 
 
 
@@ -2644,97 +2759,19 @@
                 
                 
                 
-                
-                
-                
-                
+
                 
                 
                                 <!-- Card 2 -->
                 <div class="carousel-item">
                     <div class="creator-card">
                         <span class="badge-hot">Em Alta</span>
-                        <img src="pax_0.jpg" alt="Neydi Bianca" class="creator-avatar">
-                        <div class="creator-name">Neydi Bianca</div>
+                        <img src="pax_4.jpg" alt="Santa De Jesus" class="creator-avatar">
+                        <div class="creator-name">Santa De Jesus</div>
                         <div class="creator-type">Criadora de conteúdos</div>
                         <div class="social-buttons">
-                            <a href="https://www.instagram.com/neydibianca?igsh=OWQ1YzZ6a2NqdHRj&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.tiktok.com/@neydibianca?_r=1&_t=ZS-9567Vs6pW9V" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                
-                
-
-                
-                
-                
-                
-                <!-- Card 3 -->
-                <div class="carousel-item">
-                    <div class="creator-card">
-                        <span class="badge-hot">Em Alta</span>
-                        <img src="pax_4.jpg" alt="Elisabeth Gaspar" class="creator-avatar">
-                        <div class="creator-name">Elisabeth Gaspar</div>
-                        <div class="creator-type">Criadora de conteúdos</div>
-                        <div class="social-buttons">
-                            <a href="https://www.instagram.com/elisabeth_gaspar119?igsh=bm9xNnFmb2U2N2Ry" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-
-
-
-
-
-
-
-
-
-                <!-- Card 4 -->
-                <div class="carousel-item">
-                    <div class="creator-card">
-                        <span class="badge-hot">Em Alta</span>
-                        <img src="pax_7.jpg" alt="Paula Santos" class="creator-avatar">
-                        <div class="creator-name">Paula Santos</div>
-                        <div class="creator-type">Criadora de conteúdos</div>
-                        <div class="social-buttons">
-                            <a href="https://www.instagram.com/paula5387santos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://vm.tiktok.com/ZS9LtwGVa7GJU-1QcTu/" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <!-- Card 5 -->
-                <div class="carousel-item">
-                    <div class="creator-card">
-                        <span class="badge-hot">Em Alta</span>
-                        <img src="pax_6.jpg" alt="Arunna Diogo" class="creator-avatar">
-                        <div class="creator-name">Arunna Diogo</div>
-                        <div class="creator-type">Criadora de conteúdos</div>
-                        <div class="social-buttons">
-                            <a href="https://www.instagram.com/aru_diogo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-                        
-                           
-                 <a href="https://www.tiktok.com/@arunnapamela7?_r=1&_t=ZS-95eCxneIH13" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/santadesaint?igsh=Z2hvbW4yZHpoazJm&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@santadejesus00?_r=1&_t=ZS-96HflvrU22G" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -2742,15 +2779,11 @@
                 
                 
   
-    
-                
-                
-                
-                
-                
+
+
 
                 
-                <!-- Card 6 -->
+                <!-- Card 3 -->
                 <div class="carousel-item">
                     <div class="creator-card">
                         <span class="badge-hot">Em Alta</span>
@@ -2771,9 +2804,7 @@
                 
                 
                 
-                
-                
-                
+
                 
                 
                 
@@ -2783,18 +2814,18 @@
                 
 
 
-                <!-- Card 7 -->
+                <!-- Card 4 -->
                 <div class="carousel-item">
                     <div class="creator-card">
                         <span class="badge-hot">Em Alta</span>
-                        <img src="pax_2.jpg" alt="Any" class="creator-avatar">
-                        <div class="creator-name">Any</div>
-                        <div class="creator-type">Cabeleireira</div>
+                        <img src="pax_2.jpg" alt="Cereja" class="creator-avatar">
+                        <div class="creator-name">Cereja</div>
+                        <div class="creator-type">Criadora de conteúdos</div>
                         <div class="social-buttons">
                         
-                                                       <a href="https://www.instagram.com/anilza_f_oficial?igsh=azloNml5d2Yzczg1&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                                                       <a href="https://www.instagram.com/nyca_catumbila?igsh=cTVvd2t2aWZ5bHRt&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
                                              
-                                                 <a href="https://www.tiktok.com/@anilza28?_r=1&_t=ZS-95AU0phI7oT" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>                
+                                                 <a href="https://www.tiktok.com/@nycacatumbila?_r=1&_t=ZS-96IeJG7Kk35" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>                
                             
                         </div>
                     </div>
@@ -2803,40 +2834,6 @@
                 
                 
     
-
-    
-    
-
-
-                
-    
-             
-
-
-
-
-
-
-                <!-- Card 8 -->
-
-                
-                                <div class="carousel-item">
-                    <div class="creator-card">
-                        <span class="badge-hot">Em Alta</span>
-                        <img src="pax_8.jpg" alt="magnelma_alfredo" class="creator-avatar">
-                        <div class="creator-name">Magnelma Alfredo</div>
-                        <div class="creator-type">Beleza e Estilo</div>
-                        <div class="social-buttons">
-                            <a href="https://www.instagram.com/magnelma_alfredo?igsh=amUxeGp3OWtnZWc1&utm_source=qr" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-                            
-                <a href="https://www.tiktok.com/@magnelmaalfredo2?_r=1&_t=ZS-95OyCutojpd" class="social-btn tiktok"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-               
-                
-            
-                
                 
             </div>
         </div>
@@ -2893,8 +2890,8 @@
                 <div class="user-info">
                     <img class="user-photo" src="feed_2.jpg" alt="Usuario">
                     <div class="user-details">
-                        <h4>Amanda Garcia</h4>
-                        <span class="user-niche">Artista Musical</span>
+                        <h4>Nilma Pacheco</h4>
+                        <span class="user-niche">Criadora De Conteúdos</span>
                     </div>
                 </div>
                 <div class="rating">
@@ -2908,11 +2905,11 @@
 
 
             <!-- Feedback 3 -->
-            <div class="feedback-card reveal">
+               <!--  <div class="feedback-card reveal">
                 <div class="user-info">
                     <img class="user-photo" src="feed_3.jpg" alt="Usuario">
                     <div class="user-details">
-                        <h4>Luquénia Dias</h4>
+                        <h4>Santa De Jesus</h4>
                         <span class="user-niche">Criadora de conteúdos</span>
                     </div>
                 </div>
@@ -2924,6 +2921,8 @@
                     O design é impecável e o suporte muito atencioso. Meu portfólio virou meu principal cartão de visitas.
                 </div>
             </div>
+            
+             -->
         </div>
     </div>
 
