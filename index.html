@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfy Angola</title>
+<meta name="description" content="Portfy Angola conecta criadores de conteúdo e profissionais de serviços a oportunidades reais de crescimento, parcerias e visibilidade no mercado angolano.">
+
+
+
+<meta name="keywords" content="portfólio, criação de sites, marketing digital, social mídia, taag, ucall, call center, emprego, angola, luanda" />
+    <link rel="canonical" href="https://portfyangola.vercel.app" />
+
+
+    <!-- Open Graph -->
+      <meta property="og:title" content="Portfy Angola" />
+    <meta property="og:description" content="Portfy Angola conecta criadores de conteúdo e profissionais de serviços a oportunidades reais de crescimento, parcerias e visibilidade no mercado angolano." />
+    
+    <meta property="og:type" content="website" />
+    
+    <meta property="og:url" content="Portfy Angola conecta criadores de conteúdo e profissionais de serviços a oportunidades reais de crescimento, parcerias e visibilidade no mercado angolano." />
+    
+    <meta property="og:image" content="https://portfyangola.vercel.app/logo.png" />
+    
+    <meta property="og:locale" content="pt_PT" />
+
+
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfy Angola" />
+    <meta name="twitter:description" content="Portfy Angola conecta criadores de conteúdo e profissionais de serviços a oportunidades reais de crescimento, parcerias e visibilidade no mercado angolano." />
+    
+    <meta name="twitter:image" content="https://portfyangola.vercel.app/logo.png" />
+    
+        <!-- Favicon --> 
+<link rel="icon" type="image/x-icon" href="https://portfyangola.vercel.app/logo.png" />
+    
+<link rel="apple-touch-icon" href="https://portfyangola.vercel.app/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+  :root{
+    --bg:        #07060a;
+    --bg-panel:  #0d0c11;
+    --ink:       #f4efe4;
+    --ink-dim:   #b7ada0;
+    --muted:     #766c62;
+    --gold:      #d4af6a;
+    --gold-hi:   #f3dca4;
+    --line:      #221f1a;
+    --card:      #0f0d12;
+
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body:    'Manrope', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:none;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  ::selection{background:var(--gold);color:var(--bg);}
+  @media (hover:none),(pointer:coarse){body{cursor:auto;}.cursor-dot,.cursor-ring{display:none;}}
+
+  .grain{position:fixed;inset:0;z-index:250;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:300;border-radius:50%;transform:translate(-50%,-50%);}
+  .cursor-dot{width:6px;height:6px;background:var(--gold-hi);}
+  .cursor-ring{width:32px;height:32px;border:1px solid var(--gold);transition:width .25s ease,height .25s ease,opacity .25s ease;opacity:.6;}
+  .cursor-ring.big{width:60px;height:60px;background:rgba(212,175,106,.08);opacity:1;}
+
+  #preloader{position:fixed;inset:0;z-index:500;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .8s ease,visibility .8s ease;}
+  #preloader.done{opacity:0;visibility:hidden;}
+  .pre-name{font-family:var(--font-display);font-style:italic;font-size:1.7rem;color:var(--gold-hi);letter-spacing:.04em;}
+  .pre-bar{width:180px;height:1px;background:var(--line);position:relative;overflow:hidden;}
+  .pre-bar::after{content:"";position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--gold);animation:load 1.5s ease forwards;}
+  @keyframes load{to{width:100%;}}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}.reveal{opacity:1;transform:none;}body{cursor:auto;}.cursor-dot,.cursor-ring,#preloader{display:none;}}
+
+  .eyebrow{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700;display:inline-flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);}
+  .rule{width:52px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:18px 0;}
+  .rule.center{margin:18px auto;background:var(--gold);width:64px;}
+
+  /* NAV */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;padding:24px 6vw;transition:background .3s ease,padding .3s ease;}
+  header.nav.scrolled{background:rgba(7,6,10,.85);backdrop-filter:blur(12px);padding:16px 6vw;border-bottom:1px solid var(--line);}
+  .logo{font-family:var(--font-display);font-weight:600;font-size:1.5rem;letter-spacing:.01em;}
+  .logo em{font-style:italic;color:var(--gold-hi);}
+  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim);transition:color .3s;}
+  .nav-links a:hover{color:var(--gold-hi);}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold-hi);padding:11px 22px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;transition:background .3s,color .3s;}
+  .nav-cta:hover{background:var(--gold);color:var(--bg);}
+  .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:160;}
+  .nav-burger span{width:22px;height:1px;background:var(--ink);transition:transform .3s ease,opacity .3s ease;}
+  .nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .nav-burger.open span:nth-child(2){opacity:0;}
+  .nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+  /* HERO */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:140px 6vw 80px;isolation:isolate;overflow:hidden;}
+  .hero::before{content:"";position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(circle, rgba(212,175,106,.14), transparent 62%);z-index:-1;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg-panel);padding:8px 18px;border-radius:100px;font-size:.72rem;color:var(--ink-dim);margin-bottom:30px;}
+  .hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,106,.5);}70%{box-shadow:0 0 0 9px rgba(212,175,106,0);}100%{box-shadow:0 0 0 0 rgba(212,175,106,0);}}
+  .hero h1{font-family:var(--font-display);font-weight:500;font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.04;letter-spacing:-.01em;max-width:16ch;}
+  .hero h1 em{font-style:italic;color:var(--gold-hi);}
+  .hero-sub{color:var(--ink-dim);font-size:1.05rem;max-width:52ch;margin:26px auto 0;}
+  .hero-actions{display:flex;gap:16px;margin-top:42px;flex-wrap:wrap;justify-content:center;}
+  .btn-gold{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg);font-weight:700;padding:16px 34px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:transform .3s ease,box-shadow .3s ease;border-radius:2px;}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px rgba(212,175,106,.5);}
+  .btn-outline{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);color:var(--ink);padding:16px 34px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:border-color .3s,background .3s;}
+  .btn-outline:hover{border-color:var(--gold);background:var(--bg-panel);}
+
+  section{padding:120px 6vw;border-top:1px solid var(--line);position:relative;}
+  .section-head{max-width:640px;margin:0 auto 60px;text-align:center;}
+  .section-title{font-family:var(--font-display);font-weight:500;font-size:clamp(2rem,4vw,3rem);margin-top:14px;letter-spacing:-.01em;}
+  .section-sub{color:var(--ink-dim);margin-top:16px;font-size:1rem;}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);padding:0;border-top:1px solid var(--line);}
+  .stat-box{background:var(--bg);padding:56px 30px;text-align:center;}
+  .stat-num{font-family:var(--font-display);font-size:clamp(2.4rem,4.6vw,3.6rem);color:var(--gold-hi);}
+  .stat-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:10px;}
+
+  /* TOP PORTFOLIOS */
+  .top-scroll-wrap{position:relative;margin:0 -6vw;padding:0 6vw;}
+  .top-scroll-wrap::before,.top-scroll-wrap::after{content:"";position:absolute;top:0;bottom:16px;width:6vw;z-index:3;pointer-events:none;}
+  .top-scroll-wrap::before{left:0;background:linear-gradient(90deg,var(--bg),transparent);}
+  .top-scroll-wrap::after{right:0;background:linear-gradient(270deg,var(--bg),transparent);}
+  .top-scroll{display:flex;gap:22px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;}
+  .top-scroll::-webkit-scrollbar{display:none;}
+  .top-card{flex:none;width:250px;scroll-snap-align:start;position:relative;}
+  .top-photo{position:relative;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line);}
+  .top-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%) contrast(1.05);transition:transform .6s ease,filter .4s ease;}
+  .top-card:hover .top-photo img{transform:scale(1.06);filter:grayscale(0%) contrast(1.05);}
+  .top-badge{position:absolute;top:14px;left:14px;background:rgba(7,6,10,.85);border:1px solid var(--gold);color:var(--gold-hi);padding:5px 12px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;z-index:2;}
+  .top-info{padding:16px 2px;}
+  .top-name{font-family:var(--font-display);font-size:1.2rem;}
+  .top-role{font-size:.74rem;color:var(--muted);margin-top:2px;}
+  .top-link{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:10px;transition:gap .3s ease;}
+  .top-card:hover .top-link{gap:10px;}
+
+  .carousel-nav{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:30px;}
+  .carousel-arrow{
+    width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--bg-panel);
+    color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;
+    transition:border-color .3s ease,color .3s ease,transform .3s ease;flex:none;
+  }
+  .carousel-arrow:hover{border-color:var(--gold);color:var(--gold-hi);transform:scale(1.08);}
+  .carousel-arrow:active{transform:scale(.94);}
+  .carousel-dots{display:flex;gap:9px;}
+  .carousel-dots span{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .3s ease,transform .3s ease;}
+  .carousel-dots span.active{background:var(--gold);transform:scale(1.3);}
+  @media (max-width:600px){ .carousel-arrow{width:38px;height:38px;} }
+
+  /* PARA QUEM */
+  .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+  .who-card{background:var(--bg);padding:44px 24px;text-align:center;transition:background .3s ease;}
+  .who-card:hover{background:var(--bg-panel);}
+  .who-icon{font-family:var(--font-display);font-style:italic;font-size:1.8rem;color:var(--gold-hi);margin-bottom:14px;}
+  .who-label{font-size:.86rem;color:var(--ink-dim);}
+
+  /* COMO FUNCIONA */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative;}
+  .steps::before{content:"";position:absolute;top:26px;left:8%;right:8%;height:1px;background:var(--line);z-index:0;}
+  .step-box{position:relative;text-align:center;z-index:1;}
+  .step-num{width:52px;height:52px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);color:var(--gold-hi);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-display);font-size:1.2rem;}
+  .step-box h3{font-family:var(--font-display);font-size:1.25rem;margin-bottom:10px;}
+  .step-box p{font-size:.86rem;color:var(--muted);max-width:26ch;margin:0 auto;}
+
+  /* CHECKLIST */
+  .checklist-box{background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;padding:44px 40px;max-width:720px;margin:0 auto;}
+  .checklist-title{font-family:var(--font-display);font-size:1.4rem;margin-bottom:24px;text-align:center;}
+  .checklist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .checklist li{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--ink-dim);}
+  .checklist li::before{content:"✓";color:var(--gold);font-weight:700;flex:none;}
+
+  /* PRICING */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:40px 30px;position:relative;transition:transform .35s ease,border-color .35s ease;}
+  .price-card:hover{transform:translateY(-8px);border-color:var(--gold-hi);}
+  .price-card.featured{border-color:var(--gold);background:linear-gradient(180deg, rgba(212,175,106,.06), var(--card) 40%);}
+  .price-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;white-space:nowrap;}
+  .price-name{font-family:var(--font-display);font-size:1.5rem;}
+  .price-desc{color:var(--muted);font-size:.82rem;margin-top:6px;font-style:italic;}
+  .price-amount{font-family:var(--font-display);font-size:2.6rem;color:var(--gold-hi);margin:22px 0 6px;}
+  .price-amount span{font-size:.9rem;color:var(--muted);font-family:var(--font-body);}
+  .price-list{list-style:none;margin:26px 0 30px;}
+  .price-list li{font-size:.86rem;color:var(--ink-dim);padding:9px 0;border-top:1px solid var(--line);display:flex;gap:10px;}
+  .price-list li::before{content:"✓";color:var(--gold);flex:none;}
+  .price-btn{display:block;text-align:center;border:1px solid var(--gold);color:var(--gold-hi);padding:14px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;transition:background .3s ease,color .3s ease;}
+  .price-btn:hover{background:var(--gold);color:var(--bg);}
+  .price-card.featured .price-btn{background:var(--gold);color:var(--bg);}
+  .maint-box{max-width:720px;margin:26px auto 0;background:var(--bg-panel);border:1px dashed var(--line);border-radius:10px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .maint-box h4{font-family:var(--font-display);font-size:1.15rem;}
+  .maint-box p{font-size:.82rem;color:var(--muted);margin-top:4px;}
+  .maint-price{font-family:var(--font-display);color:var(--gold-hi);font-size:1.3rem;white-space:nowrap;}
+
+  /* CLIENTES GRID */
+  .clients-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .client-card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .3s ease,border-color .3s ease;}
+  .client-card:hover{transform:translateY(-6px);border-color:var(--gold-hi);}
+  .client-photo{aspect-ratio:1;overflow:hidden;}
+  .client-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%);transition:transform .5s ease,filter .4s ease;}
+  .client-card:hover .client-photo img{transform:scale(1.08);filter:grayscale(0%);}
+  .client-info{padding:18px 18px 20px;}
+  .client-badge{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block;}
+  .client-name{font-family:var(--font-display);font-size:1.1rem;}
+  .client-role{font-size:.74rem;color:var(--muted);margin-top:2px;}
+  .client-socials{display:flex;gap:12px;margin-top:12px;}
+  .client-socials a{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);transition:color .3s;}
+  .client-socials a:hover{color:var(--gold-hi);}
+
+  /* TESTEMUNHOS */
+  .t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .t-card{background:var(--bg-panel);border:1px solid var(--line);border-radius:12px;padding:34px 32px;}
+  .t-stars{color:var(--gold);font-size:.9rem;margin-bottom:16px;letter-spacing:2px;}
+  .t-quote{font-family:var(--font-display);font-size:1.2rem;font-style:italic;color:var(--ink);margin-bottom:22px;line-height:1.4;}
+  .t-author{display:flex;align-items:center;gap:12px;}
+  .t-avatar{width:42px;height:42px;border-radius:50%;overflow:hidden;border:1px solid var(--gold);flex:none;}
+  .t-avatar img{width:100%;height:100%;object-fit:cover;}
+  .t-name{font-size:.86rem;font-weight:700;}
+  .t-role{font-size:.72rem;color:var(--muted);}
+
+  /* CTA FINAL */
+  .cta-band{text-align:center;position:relative;overflow:hidden;}
+  .cta-band::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle, rgba(212,175,106,.12), transparent 65%);pointer-events:none;}
+  .cta-actions{display:flex;justify-content:center;gap:16px;margin-top:38px;flex-wrap:wrap;position:relative;}
+
+  footer{border-top:1px solid var(--line);padding:50px 6vw;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;}
+  .foot-brand{font-family:var(--font-display);font-size:1.3rem;}
+  .foot-brand em{font-style:italic;color:var(--gold-hi);}
+  .foot-desc{font-size:.8rem;color:var(--muted);margin-top:8px;max-width:32ch;}
+  .foot-links{display:flex;gap:26px;}
+  .foot-links a{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);transition:color .3s;}
+  .foot-links a:hover{color:var(--gold-hi);}
+  .foot-copy{width:100%;text-align:center;font-size:.72rem;color:var(--muted);padding-top:30px;border-top:1px solid var(--line);margin-top:10px;}
+
+  @media (max-width:900px){
+    .nav-links{position:fixed;top:0;right:0;height:100svh;width:min(78vw,320px);flex-direction:column;justify-content:center;align-items:flex-start;gap:26px;background:#0b0a10;padding:0 10vw;transform:translateX(100%);transition:transform .45s cubic-bezier(.16,1,.3,1);border-left:1px solid var(--line);z-index:155;}
+    .nav-links.open{transform:translateX(0);}
+    .nav-links a{font-size:.85rem;}
+    .nav-burger{display:flex;}
+    .stats{grid-template-columns:1fr;}
+    .who-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:1fr 1fr;gap:36px 20px;}
+    .steps::before{display:none;}
+    .checklist{grid-template-columns:1fr;}
+    .pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+    .clients-grid{grid-template-columns:repeat(2,1fr);}
+    .t-grid{grid-template-columns:1fr;}
+    section{padding:80px 6vw;}
+    .maint-box{flex-direction:column;text-align:center;}
+  }
+  @media (max-width:480px){
+    .who-grid{grid-template-columns:1fr;}
+    .clients-grid{grid-template-columns:1fr;}
+    .top-card{width:72vw;max-width:260px;}
+    .hero{padding-top:120px;}
+    .carousel-nav{gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cdot"></div>
+<div class="cursor-ring" id="cring"></div>
+
+<div id="preloader">
+  <div class="pre-name">Portfy Angola</div>
+  <div class="pre-bar"></div>
+</div>
+
+<header class="nav" id="navHeader">
+  <a href="#inicio" class="logo">Portf<em>y</em></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#planos">Planos</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#clientes">Clientes</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a class="nav-cta" href="#planos">Criar Portfólio</a>
+  </nav>
+  <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-badge"><span class="hero-dot"></span> Plataforma nº1 de portfólios digitais em Angola</div>
+  <h1>Transforma o teu perfil numa <em>fonte de clientes</em> e oportunidades</h1>
+  <p class="hero-sub">Cria um portfólio profissional, aumenta a tua visibilidade e facilita o contacto com marcas, clientes e parceiros.</p>
+  <div class="hero-actions">
+    <a class="btn-gold" href="#planos">Criar Meu Portfólio →</a>
+    <a class="btn-outline" href="#clientes">Explorar Criadores</a>
+  </div>
+</section>
+
+<section class="stats reveal">
+  <div class="stat-box"><div class="stat-num" data-count="20">0</div><div class="stat-label">Portfólios Criados</div></div>
+  <div class="stat-box"><div class="stat-num" data-count="1000" data-suffix="+">0</div><div class="stat-label">Visitantes Únicos</div></div>
+</section>
+
+<section class="reveal">
+  <div class="section-head">
+    <span class="eyebrow">Esta Semana</span>
+    <h2 class="section-title">Top 3 Portfólios Mais Acessados</h2>
+    <p class="section-sub">Os perfis que estão a dominar a audiência esta semana</p>
+  </div>
+  <div class="top-scroll-wrap">
+    <div class="top-scroll" id="topScroll">
+      
+      <div class="top-card">
+        <div class="top-photo"><span class="top-badge">Top Portfólio</span><img src="dep_3.jpg" alt="Elisa Fonseca"></div>
+        <div class="top-info"><div class="top-name">Elisa Fonseca</div><div class="top-role">Criadora de Conteúdos</div><a class="top-link" href="https://elisafonseca.vercel.app" target="_blank" rel="noopener">Ver Portfólio →</a></div>
+      </div>
+
+      
+      <div class="top-card">
+        <div class="top-photo"><span class="top-badge">Premium</span><img src="dep_1.jpg" alt="Delícias Mar E Terra"></div>
+        <div class="top-info"><div class="top-name">Delícias Mar E Terra</div><div class="top-role">Restaurante</div><a class="top-link" href="https://deliciasmareterra.vercel.app" target="_blank" rel="noopener">Ver Portfólio →</a></div>
+      </div>
+      
+      
+      <div class="top-card">
+        <div class="top-photo"><span class="top-badge">Profissional</span><img src="dep_2.jpg" alt="Santa De Jesus"></div>
+        <div class="top-info"><div class="top-name">Santa De Jesus</div><div class="top-role">Criadora De Conteúdos</div><a class="top-link" href="https://santadejesus.vercel.app" target="_blank" rel="noopener">Ver Portfólio →</a></div>
+      </div>
+      
+      
+      
+    </div>
+  </div>
+  <div class="carousel-nav">
+    <button class="carousel-arrow" id="topPrev" aria-label="Anterior">←</button>
+    <div class="carousel-dots" id="topDots"></div>
+    <button class="carousel-arrow" id="topNext" aria-label="Seguinte">→</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="reveal">
+  <div class="section-head">
+    <span class="eyebrow">Para Quem É</span>
+    <h2 class="section-title">Uma plataforma para quem quer destacar-se</h2>
+  </div>
+  <div class="who-grid">
+    <div class="who-card"><div class="who-icon">Criadores</div><div class="who-label">de Conteúdo</div></div>
+    <div class="who-card"><div class="who-icon">Maquiadoras</div><div class="who-label">& Estética</div></div>
+    <div class="who-card"><div class="who-icon">Fotógrafos</div><div class="who-label">& Videomakers</div></div>
+    <div class="who-card"><div class="who-icon">Empreendedores</div><div class="who-label">& Negócios</div></div>
+    <div class="who-card"><div class="who-icon">Designers</div><div class="who-label">& Criativos</div></div>
+    <div class="who-card"><div class="who-icon">Músicos</div><div class="who-label">& Artistas</div></div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="como-funciona" class="reveal">
+  <div class="section-head">
+    <span class="eyebrow">Processo</span>
+    <h2 class="section-title">Como criar o teu portfólio</h2>
+    <p class="section-sub">Simples, rápido e transformador — em 4 passos</p>
+  </div>
+  <div class="steps">
+    <div class="step-box"><div class="step-num">1</div><h3>Escolhe o Plano</h3><p>Seleciona o plano que melhor atende às tuas necessidades.</p></div>
+    <div class="step-box"><div class="step-num">2</div><h3>Envia os Dados</h3><p>Fotos, links das redes e conteúdo que desejas exibir.</p></div>
+    <div class="step-box"><div class="step-num">3</div><h3>Criação & Revisão</h3><p>Criamos o design personalizado, com revisões conforme o plano.</p></div>
+    <div class="step-box"><div class="step-num">4</div><h3>Portfólio no Ar</h3><p>Recebe o teu link exclusivo e começa a atrair clientes.</p></div>
+  </div>
+
+  <div class="checklist-box" style="margin-top:70px;">
+    <div class="checklist-title">O que precisas ter</div>
+    <ul class="checklist">
+      <li>Duas fotos tuas</li>
+      <li>Biografia / sobre ti</li>
+      <li>E-mail ou WhatsApp de contacto</li>
+      <li>Links: Instagram, TikTok, Facebook, YouTube</li>
+      <li>Fotos ou vídeos dos teus trabalhos</li>
+      <li>Serviços que ofereces (se aplicável)</li>
+    </ul>
+    <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:.82rem;">Após o envio, o teu portfólio fica pronto em <strong style="color:var(--gold-hi);">48 horas</strong> (planos Elite têm prioridade).</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="planos" class="reveal">
+  <div class="section-head">
+    <span class="eyebrow">Planos & Preços</span>
+    <h2 class="section-title">Transforma o teu perfil numa vitrine profissional</h2>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-name">Essencial</div>
+      <div class="price-desc">"A tua primeira vitrine"</div>
+      <div class="price-amount">30.000 <span>Kz</span></div>
+      <ul class="price-list">
+        <li>Portfólio profissional completo</li>
+        <li>Foto de perfil e biografia</li>
+        <li>Links de todas as redes sociais</li>
+        <li>Botão direto para WhatsApp</li>
+        <li>Área "Sobre"</li>
+        <li>Entrega em 48 horas</li>
+      </ul>
+      <a class="price-btn" href="javascript:void(0)" data-wa>Quero Este</a>
+    </div>
+    
+    
+    
+    <div class="price-card featured">
+      <span class="price-tag">Mais Vendido</span>
+      <div class="price-name">Profissional</div>
+      <div class="price-desc">"Atrai marcas e parcerias"</div>
+      <div class="price-amount">70.000 <span>Kz</span></div>
+      <ul class="price-list">
+        <li>Tudo do plano Essencial +</li>
+        <li>Galeria de fotos e vídeos</li>
+        <li>Destaque de até 8 serviços</li>
+        <li>Bio profissional escrita por nós</li>
+        <li>Design com as tuas cores e identidade</li>
+        <li>1 revisão incluída</li>
+      </ul>
+      <a class="price-btn" href="javascript:void(0)" data-wa>Quero Este</a>
+    </div>
+    
+
+
+
+    <div class="price-card">
+      <div class="price-name">Elite </div>
+      <div class="price-desc">"Nível artista e influencer"</div>
+      <div class="price-amount">100.000 <span>Kz</span></div>
+      <ul class="price-list">
+        <li>Tudo do plano Profissional +</li>
+        <li>Design exclusivo e premium</li>
+        <li>Estratégia de posicionamento digital</li>
+        <li>Otimização para atrair marcas</li>
+        <li>Domínio .Com incluído</li>
+        <li>2 revisões · entrega em 24h</li>
+      </ul>
+      <a class="price-btn" href="javascript:void(0)" data-wa>Quero Este</a>
+    </div>
+  </div>
+  <div class="maint-box">
+    <div><h4>Manutenção Mensal</h4><p>Mantém o teu portfólio sempre atualizado</p></div>
+    <div class="maint-price">12.000 Kz<span style="font-size:.7rem;color:var(--muted);">/mês</span></div>
+    <a class="price-btn" style="width:auto;padding:12px 24px;" href="javascript:void(0)" data-wa>Assinar</a>
+  </div>
+  <p style="text-align:center;margin-top:26px;font-size:.76rem;color:var(--muted);">🔒 Todos os planos incluem link único e personalizado. Pagamento via transferência ou depósito.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="depoimentos" class="reveal">
+  <div class="section-head">
+    <span class="eyebrow">Depoimentos</span>
+    <h2 class="section-title">O que dizem os nossos clientes</h2>
+  </div>
+  <div class="t-grid">
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"O meu portfólio ficou incrível! Além de bonito, já me trouxe vários clientes novos."</p>
+      <div class="t-author">
+        <div class="t-avatar"><img src="dep_1.jpg" alt="Delícias Mar e Terra"></div>
+        <div><div class="t-name">Delícias Mar e Terra</div><div class="t-role">Restaurante</div></div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"A diferença entre amador e profissional está no portfólio. Aqui há resultado, não só promessa."</p>
+      <div class="t-author">
+        <div class="t-avatar"><img src="dep_2.jpg" alt="Santa De Jesus"></div>
+        <div><div class="t-name">Santa De Jesus</div><div class="t-role">Criadora de Conteúdos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="cta-band reveal">
+  <span class="eyebrow" style="justify-content:center;">Sua Vitrine Profissional</span>
+  <h2 class="section-title">Começa a crescer com a Portfy hoje</h2>
+  <div class="cta-actions">
+    <a class="btn-gold" href="#planos">Criar Meu Portfólio →</a>
+    <a class="btn-outline" href="javascript:void(0)" data-wa>Falar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="foot-brand">Portf<em>y</em> Angola</div>
+    <p class="foot-desc">A tua vitrine profissional. Conectamos criadores, artistas e empreendedores a novas oportunidades.</p>
+  </div>
+  <div class="foot-links">
+    <a href="https://vm.tiktok.com/ZS98wYM38Dkvv-OufbE/" target="_blank" rel="noopener">TikTok</a>
+    <a href="javascript:void(0)" data-wa>WhatsApp</a>
+    <a href="tel:+244936584701">Telefone</a>
+  </div>
+  <div class="foot-copy">© 2026 Portfy Angola. Todos os direitos reservados.</div>
+</footer>
+
+<script>
+  const WA = "https://wa.me/244936584701?text=Olá,%20gostaria%20de%20criar%20o%20meu%20portfólio%20com%20a%20Portfy%20Angola.";
+  document.querySelectorAll('[data-wa]').forEach(el=>el.addEventListener('click',()=>window.open(WA)));
+
+  window.addEventListener('load',()=>{ setTimeout(()=>document.getElementById('preloader').classList.add('done'),1200); });
+
+  const cdot=document.getElementById('cdot'), cring=document.getElementById('cring');
+  let mx=0,my=0,rx=0,ry=0;
+  window.addEventListener('mousemove',e=>{ mx=e.clientX;my=e.clientY; cdot.style.left=mx+'px';cdot.style.top=my+'px'; });
+  (function ringLoop(){ rx+=(mx-rx)*.18; ry+=(my-ry)*.18; cring.style.left=rx+'px'; cring.style.top=ry+'px'; requestAnimationFrame(ringLoop); })();
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cring.classList.add('big'));
+    el.addEventListener('mouseleave',()=>cring.classList.remove('big'));
+  });
+
+  const navHeader=document.getElementById('navHeader');
+  window.addEventListener('scroll',()=>{ navHeader.classList.toggle('scrolled', window.scrollY>40); });
+
+  const burger=document.getElementById('navBurger'), navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>{ burger.classList.toggle('open'); navLinks.classList.toggle('open'); });
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ burger.classList.remove('open'); navLinks.classList.remove('open'); }));
+
+  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // carrossel Top 5 Portfólios — responsivo (setas, pontos, teclado, swipe nativo)
+  const topScroll=document.getElementById('topScroll'), topDots=document.getElementById('topDots');
+  const topCards=Array.from(topScroll.children);
+  topCards.forEach((_,i)=>{
+    const d=document.createElement('span'); if(i===0) d.classList.add('active');
+    d.addEventListener('click',()=> topCards[i].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'}));
+    topDots.appendChild(d);
+  });
+  function cardStep(){
+    const card=topCards[0];
+    const style=getComputedStyle(topScroll);
+    const gap=parseFloat(style.columnGap||style.gap||22);
+    return card.getBoundingClientRect().width + gap;
+  }
+  document.getElementById('topPrev').addEventListener('click',()=> topScroll.scrollBy({left:-cardStep(),behavior:'smooth'}));
+  document.getElementById('topNext').addEventListener('click',()=> topScroll.scrollBy({left:cardStep(),behavior:'smooth'}));
+  topScroll.addEventListener('scroll',()=>{
+    const center=topScroll.scrollLeft + topScroll.clientWidth/2;
+    let closest=0, min=Infinity;
+    topCards.forEach((c,i)=>{
+      const dist=Math.abs((c.offsetLeft + c.offsetWidth/2) - center);
+      if(dist<min){min=dist;closest=i;}
+    });
+    [...topDots.children].forEach((d,i)=>d.classList.toggle('active', i===closest));
+  });
+  // arrasto com o rato (desktop) além do swipe nativo (touch)
+  let isDown=false, startX=0, scrollStart=0;
+  topScroll.addEventListener('mousedown',e=>{ isDown=true; topScroll.style.scrollSnapType='none'; startX=e.pageX; scrollStart=topScroll.scrollLeft; });
+  window.addEventListener('mouseup',()=>{ isDown=false; topScroll.style.scrollSnapType='x mandatory'; });
+  window.addEventListener('mousemove',e=>{ if(!isDown) return; topScroll.scrollLeft = scrollStart - (e.pageX - startX); });
+
+  const counters=document.querySelectorAll('[data-count]');
+  const cio=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target, target=+el.dataset.count, suffix=el.dataset.suffix||'+', dur=1600, start=performance.now();
+        function step(now){
+          const p=Math.min((now-start)/dur,1);
+          el.textContent = Math.floor(p*target).toLocaleString('pt-PT');
+          if(p<1) requestAnimationFrame(step);
+          else el.textContent = target.toLocaleString('pt-PT') + suffix;
+        }
+        requestAnimationFrame(step);
+        cio.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  counters.forEach(c=>cio.observe(c));
+</script>
+
+</body>
+</html>
+
